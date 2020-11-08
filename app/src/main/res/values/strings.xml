@@ -7,7 +7,24 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    <!--  MAIN DRAWER MENU ITEMS  -->
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_menu">Menu</string>
+    <string name="menu_bakery">Our Bakery</string>
+    <string name="menu_recipes">Recipes</string>
+    <string name="menu_account">My Account</string>
+    <string name="menu_orders">Orders</string>
+    <string name="menu_contact">Contact Us</string>
+
+    <!--  MOBILE NAVIGATION FRAGMENT LABELS  -->
+    <string name="nav_home">COOKIE CORNER</string>
+    <string name="nav_menu">OUR MENU</string>
+    <string name="nav_bakery">OUR BAKERY</string>
+    <string name="nav_recipes">RECIPES</string>
+    <string name="nav_account">My Account</string>
+    <string name="nav_orders">Orders</string>
+    <string name="nav_contact">CONTACT US</string>
+
+
+
 </resources>
