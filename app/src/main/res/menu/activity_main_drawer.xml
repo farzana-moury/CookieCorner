@@ -9,12 +9,51 @@
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
         <item
-            android:id=
+            android:id="@+id/nav_menu"
             android:icon="@drawable/ic_menu_gallery"
             android:title="@string/menu_menu" />
         <item
-            android:id=
+            android:id="@+id/nav_bakery"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_bakery" />
+
+        <item
+            android:id="@+id/nav_recipes"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_recipes" />
     </group>
+
+
+    <item android:title="@string/sub_account">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_account"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="@string/menu_account" />
+
+                <item
+                    android:id="@+id/nav_orders"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="@string/menu_orders" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="@string/sub_contact">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_contact"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="@string/menu_contact" />
+            </group>
+        </menu>
+    </item>
+
+<!--   #1 Create Main Menu
+  * added the rest of the fragments to mobile_navigation.xml
+  * added respective IDs and labels to these fragments
+  * added the fragment IDs to AppBarConfiguration in MainActivity
+  * created the rest of the drawer items  -->
 </menu>

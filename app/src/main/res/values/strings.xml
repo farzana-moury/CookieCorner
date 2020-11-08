@@ -15,6 +15,10 @@
     <string name="menu_account">My Account</string>
     <string name="menu_orders">Orders</string>
     <string name="menu_contact">Contact Us</string>
+    <!--  MAIN DRAWER SUBHEADINGS  -->
+    <string name="sub_account">Account</string>
+    <string name="sub_contact">Need Help?</string>
+
 
     <!--  MOBILE NAVIGATION FRAGMENT LABELS  -->
     <string name="nav_home">COOKIE CORNER</string>
@@ -24,7 +28,5 @@
     <string name="nav_account">My Account</string>
     <string name="nav_orders">Orders</string>
     <string name="nav_contact">CONTACT US</string>
-
-
 
 </resources>
