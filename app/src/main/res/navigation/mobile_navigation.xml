@@ -8,7 +8,14 @@
         android:id="@+id/nav_home"
         android:name="com.example.cookiecorner.HomeFragment"
         android:label="@string/nav_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_account"
+            app:destination="@id/nav_account" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_menu"
+            app:destination="@id/nav_menu" />
+    </fragment>
     <fragment
         android:id="@+id/nav_menu"
         android:name="com.example.cookiecorner.MenuFragment"
