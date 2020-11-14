@@ -1,6 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ContactFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ContactFragment"/>
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/emailButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginTop="@dimen/bottomPaddingButton"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/email"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/phoneButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/phone"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/textButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/text"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/locationButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/location"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/websiteButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/website"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/igButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/instagram"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/twtButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_marginBottom="@dimen/bottomPaddingButton"
+            android:text="@string/twitter"
+            android:textAllCaps="false" />
+    </LinearLayout>
+</ScrollView>

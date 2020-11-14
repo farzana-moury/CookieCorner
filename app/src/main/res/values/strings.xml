@@ -30,15 +30,23 @@
     <string name="nav_contact">CONTACT US</string>
 
     <!--  GALLERY, RATINGS AND FAQ FRAGMENT STRINGS  -->
-    <!--  top headings  -->
+    <!--  TOP HEADINGS  -->
     <string name="nav_gallery">GALLERY</string>
     <string name="nav_ratings">RATINGS</string>
     <string name="nav_faq">FREQUENTLY ASKED QUESTIONS</string>
-    <!--  button titles  -->
+    <!--  BUTTON TITLES  -->
     <string name="gallery_name">Gallery</string>
     <string name="ratings_name">Ratings</string>
     <string name="faq_name">FAQ</string>
 
+    <!--  CONTACT FRAGMENT BUTTON STRINGS -->
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="text">Text</string>
+    <string name="location">Location</string>
+    <string name="website">Website</string>
+    <string name="instagram">Instagram</string>
+    <string name="twitter">Twitter</string>
 
     <!--  COMPANY INFORMATION  -->
     <string name="CompanyDesc">Here at Cookie Corner, we believe that every cookie counts. Celebrating our 50th anniversary,
