@@ -5,4 +5,22 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--  Text Sizes  -->
+    <dimen name="titleSize">40sp</dimen>
+    <dimen name="descriptionSize">20sp</dimen>
+
+    <!--  Layout Sizes  -->
+    <dimen name="titleLayout">80dp</dimen>
+    <dimen name="titleHeight">134dp</dimen>
+
+    <!--  Padding Sizes  -->
+    <dimen name="logoPadding">10dp</dimen>
+    <dimen name="titlePadding">15dp</dimen>
+    <dimen name="descriptionPadding">20dp</dimen>
+    <dimen name="bottomPaddingButton">40dp</dimen>
+
+    <!--  Button Sizes  -->
+    <dimen name="homeButtonsWidth">300dp</dimen>
+    <dimen name="homeButtonsHeight">70dp</dimen>
 </resources>

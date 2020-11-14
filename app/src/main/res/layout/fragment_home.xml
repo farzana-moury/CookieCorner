@@ -1,9 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".HomeFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    android:layout_height="match_parent">
 
+    <LinearLayout
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/titleHeight"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="@dimen/titleLayout"
+                android:layout_height="@dimen/titleLayout"
+                android:layout_gravity="top|center_vertical"
+                android:padding="@dimen/logoPadding"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/companyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titleLayout"
+                android:gravity="center"
+                android:paddingRight="@dimen/titlePadding"
+                android:text="@string/nav_header_title"
+                android:textAlignment="center"
+                android:textSize="@dimen/titleSize"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/homeImage"
+            android:layout_width="match_parent"
+            android:layout_height="278dp"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/titleDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="a picture of our cookies"
+            android:paddingLeft="@dimen/logoPadding"
+            android:paddingTop="@dimen/descriptionPadding"
+            android:paddingRight="@dimen/logoPadding"
+            android:paddingBottom="@dimen/descriptionPadding"
+            android:text="@string/CompanyDesc"
+            android:textAlignment="center"
+            android:textSize="@dimen/descriptionSize" />
+
+        <Button
+            android:id="@+id/accountButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/descriptionPadding"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="@string/nav_account"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/menuButton"
+            android:layout_width="@dimen/homeButtonsWidth"
+            android:layout_height="@dimen/homeButtonsHeight"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/bottomPaddingButton"
+            android:text="@string/menu_menu"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
+
