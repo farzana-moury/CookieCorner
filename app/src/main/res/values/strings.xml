@@ -29,6 +29,17 @@
     <string name="nav_orders">Orders</string>
     <string name="nav_contact">CONTACT US</string>
 
+    <!--  GALLERY, RATINGS AND FAQ FRAGMENT STRINGS  -->
+    <!--  top headings  -->
+    <string name="nav_gallery">GALLERY</string>
+    <string name="nav_ratings">RATINGS</string>
+    <string name="nav_faq">FREQUENTLY ASKED QUESTIONS</string>
+    <!--  button titles  -->
+    <string name="gallery_name">Gallery</string>
+    <string name="ratings_name">Ratings</string>
+    <string name="faq_name">FAQ</string>
+
+
     <!--  COMPANY INFORMATION  -->
     <string name="CompanyDesc">Here at Cookie Corner, we believe that every cookie counts. Celebrating our 50th anniversary,
     we bake home into the heart of our cookie dough, combining natural and flavourful ingredients that leave your tastebuds

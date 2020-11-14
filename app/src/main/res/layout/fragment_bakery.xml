@@ -3,5 +3,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/side_nav_bar"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".BakeryFragment">
+
+    <Button
+        android:id="@+id/galleryButton"
+        android:layout_width="@dimen/homeButtonsWidth"
+        android:layout_height="@dimen/homeButtonsHeight"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/descriptionPadding"
+        android:text="@string/gallery_name"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/ratingsButton"
+        android:layout_width="@dimen/homeButtonsWidth"
+        android:layout_height="@dimen/homeButtonsHeight"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/descriptionPadding"
+        android:text="@string/ratings_name"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/faqButton"
+        android:layout_width="@dimen/homeButtonsWidth"
+        android:layout_height="@dimen/homeButtonsHeight"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/descriptionPadding"
+        android:text="@string/faq_name" />
 </LinearLayout>

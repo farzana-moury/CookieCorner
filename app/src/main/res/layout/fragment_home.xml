@@ -35,6 +35,7 @@
                 android:paddingRight="@dimen/titlePadding"
                 android:text="@string/nav_header_title"
                 android:textAlignment="center"
+                android:textAllCaps="false"
                 android:textSize="@dimen/titleSize"
                 android:textStyle="bold" />
         </LinearLayout>
