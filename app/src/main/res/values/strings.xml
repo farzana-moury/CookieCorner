@@ -52,5 +52,7 @@
     <string name="CompanyDesc">Here at Cookie Corner, we believe that every cookie counts. Celebrating our 50th anniversary,
     we bake home into the heart of our cookie dough, combining natural and flavourful ingredients that leave your tastebuds
     wanting more every time.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

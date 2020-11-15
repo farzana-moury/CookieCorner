@@ -25,7 +25,17 @@
         android:id="@+id/nav_bakery"
         android:name="com.example.cookiecorner.BakeryFragment"
         android:label="@string/nav_bakery"
-        tools:layout="@layout/fragment_bakery" />
+        tools:layout="@layout/fragment_bakery" >
+        <action
+            android:id="@+id/action_nav_bakery_to_galleryFragment"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_nav_bakery_to_FAQFragment"
+            app:destination="@id/nav_faq" />
+        <action
+            android:id="@+id/action_nav_bakery_to_ratingsFragment"
+            app:destination="@id/nav_ratings" />
+    </fragment>
     <fragment
         android:id="@+id/nav_recipes"
         android:name="com.example.cookiecorner.RecipesFragment"
@@ -46,4 +56,19 @@
         android:name="com.example.cookiecorner.ContactFragment"
         android:label="@string/nav_contact"
         tools:layout="@layout/fragment_contact" />
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.example.cookiecorner.GalleryFragment"
+        android:label="@string/nav_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_ratings"
+        android:name="com.example.cookiecorner.RatingsFragment"
+        android:label="@string/nav_ratings"
+        tools:layout="@layout/fragment_ratings" />
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.example.cookiecorner.FAQFragment"
+        android:label="@string/nav_faq"
+        tools:layout="@layout/fragment_f_a_q" />
 </navigation>
