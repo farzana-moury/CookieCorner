@@ -201,8 +201,28 @@ public class ContactFragment extends Fragment {
         });
 
         Button instagramButton = view.findViewById(R.id.igButton);
+        instagramButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri instagram = Uri.parse("http://www.instagram.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, instagram);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
 
         Button twitterButton = view.findViewById(R.id.twtButton);
+        twitterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri twitter = Uri.parse("http://www.twitter.com");
+                Intent intent = new Intent(Intent.ACTION_VIEW, twitter);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
 
 
         return view;
