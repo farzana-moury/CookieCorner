@@ -1,9 +1,15 @@
 package com.example.cookiecorner;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -24,6 +30,7 @@ public class ContactFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    public static final int PERMISSION_SEND_TEXT = 0;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -97,6 +104,106 @@ public class ContactFragment extends Fragment {
 
             }
         });
+
+        Button phoneButton = view.findViewById(R.id.phoneButton);
+        phoneButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri supportNumber = Uri.parse("tel:5192561128");
+
+                Intent intent = new Intent(Intent.ACTION_DIAL, supportNumber);
+
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }else{
+                    startActivity(intent);
+                }
+            }
+        });
+
+        Button textButton = view.findViewById(R.id.textButton);
+        textButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Check to see if we do not have the permission
+                if(ContextCompat.checkSelfPermission(getActivity(),
+                        Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
+                    //If I do not have the permission have I already asked?
+                    if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
+                            Manifest.permission.SEND_SMS)){
+                        final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
+                        alertDialog.setTitle("Text Permission");
+                        alertDialog.setMessage("We need your approval to send a text message.");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        alertDialog.dismiss();
+                                        ActivityCompat.requestPermissions(getActivity(),
+                                                new String[]{Manifest.permission.SEND_SMS},
+                                                PERMISSION_SEND_TEXT);
+                                    }
+                                });
+                        alertDialog.show();
+                    }
+                    //Request the permission
+                    else{
+                        ActivityCompat.requestPermissions(getActivity(),
+                                new String[]{Manifest.permission.SEND_SMS},
+                                PERMISSION_SEND_TEXT);
+                    }
+                }
+                else {
+                    Intent intent = new Intent(Intent.ACTION_SENDTO);
+                    intent.setData(Uri.parse("smsto:5192561128"));
+                    intent.putExtra("text_body", "Hello, I would like to know about the following: "+
+                            "\n• Delivery Service" +
+                            "\n• Menu Service" +
+                            "\n• Office Hours" +
+                            "\n• Booking Celebrations" +
+                            "\n• Seasonal Discounts");
+
+                    if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                        Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                    }else{
+                        startActivity(intent);
+                    }
+                }
+            }
+        });
+
+        Button locationButton = view.findViewById(R.id.locationButton);
+        locationButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Uri cookieBakery = Uri.parse("geo:42.3151773152232, -83.03943388022972");
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, cookieBakery);
+
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }else{
+                    startActivity(intent);
+                }
+            }
+        });
+
+        Button websiteButton = view.findViewById(R.id.websiteButton);
+        websiteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri website = Uri.parse("http://www.cookiecorner.ca");
+                Intent intent = new Intent(Intent.ACTION_VIEW, website);
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(intent);
+                }
+            }
+        });
+
+        Button instagramButton = view.findViewById(R.id.igButton);
+
+        Button twitterButton = view.findViewById(R.id.twtButton);
+
 
         return view;
     }
