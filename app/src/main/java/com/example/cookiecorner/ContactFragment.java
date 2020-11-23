@@ -1,5 +1,7 @@
 package com.example.cookiecorner;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +64,40 @@ public class ContactFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contact, container, false);
+        final View view = inflater.inflate(R.layout.fragment_contact, container, false);
+
+        //Adding functionality to each button in fragment_contact.xml
+        Button emailButton = view.findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String[] myEmail = {"cookiecat9934@gmail.com"};
+                String[] customerSupport = {"customersupport@cookiecorner.ca"};
+
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("mailto:"));
+                intent.putExtra(Intent.EXTRA_EMAIL, myEmail);
+                intent.putExtra(Intent.EXTRA_SUBJECT, "Customer Support Inquiry");
+                intent.putExtra(Intent.EXTRA_CC, customerSupport);
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello, I would like to know about the following: " +
+                        "\n• Delivery Service" +
+                        "\n• Menu Service" +
+                        "\n• Office Hours" +
+                        "\n• Booking Celebrations" +
+                        "\n• Seasonal Discounts");
+
+                //see if there is a software that can resolve this activity
+                if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    //as long as it does not equal null, do this task
+                    //display error message here
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }else{
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+        return view;
     }
 }
