@@ -6,7 +6,7 @@
     android:background="@drawable/side_nav_bar"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".BakeryFragment">
+    tools:context=".fragments.BakeryFragment">
 
     <Button
         android:id="@+id/galleryButton"

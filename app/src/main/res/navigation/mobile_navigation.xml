@@ -6,7 +6,7 @@
     app:startDestination="@id/nav_home">
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.cookiecorner.HomeFragment"
+        android:name="com.example.cookiecorner.fragments.HomeFragment"
         android:label="@string/nav_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -18,12 +18,12 @@
     </fragment>
     <fragment
         android:id="@+id/nav_menu"
-        android:name="com.example.cookiecorner.MenuFragment"
+        android:name="com.example.cookiecorner.fragments.MenuFragment"
         android:label="@string/nav_menu"
         tools:layout="@layout/fragment_menu" />
     <fragment
         android:id="@+id/nav_bakery"
-        android:name="com.example.cookiecorner.BakeryFragment"
+        android:name="com.example.cookiecorner.fragments.BakeryFragment"
         android:label="@string/nav_bakery"
         tools:layout="@layout/fragment_bakery" >
         <action
@@ -38,37 +38,37 @@
     </fragment>
     <fragment
         android:id="@+id/nav_recipes"
-        android:name="com.example.cookiecorner.RecipesFragment"
+        android:name="com.example.cookiecorner.fragments.RecipesFragment"
         android:label="@string/nav_recipes"
         tools:layout="@layout/fragment_recipes" />
     <fragment
         android:id="@+id/nav_account"
-        android:name="com.example.cookiecorner.AccountFragment"
+        android:name="com.example.cookiecorner.fragments.AccountFragment"
         android:label="@string/nav_account"
         tools:layout="@layout/fragment_account" />
     <fragment
         android:id="@+id/nav_orders"
-        android:name="com.example.cookiecorner.OrdersFragment"
+        android:name="com.example.cookiecorner.fragments.OrdersFragment"
         android:label="@string/nav_orders"
         tools:layout="@layout/fragment_orders" />
     <fragment
         android:id="@+id/nav_contact"
-        android:name="com.example.cookiecorner.ContactFragment"
+        android:name="com.example.cookiecorner.fragments.ContactFragment"
         android:label="@string/nav_contact"
         tools:layout="@layout/fragment_contact" />
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.cookiecorner.GalleryFragment"
+        android:name="com.example.cookiecorner.fragments.GalleryFragment"
         android:label="@string/nav_gallery"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/nav_ratings"
-        android:name="com.example.cookiecorner.RatingsFragment"
+        android:name="com.example.cookiecorner.fragments.RatingsFragment"
         android:label="@string/nav_ratings"
         tools:layout="@layout/fragment_ratings" />
     <fragment
         android:id="@+id/nav_faq"
-        android:name="com.example.cookiecorner.FAQFragment"
+        android:name="com.example.cookiecorner.fragments.FAQFragment"
         android:label="@string/nav_faq"
         tools:layout="@layout/fragment_f_a_q" />
 </navigation>
