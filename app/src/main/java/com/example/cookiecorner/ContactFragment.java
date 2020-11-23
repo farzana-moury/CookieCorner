@@ -30,7 +30,6 @@ public class ContactFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    public static final int PERMISSION_SEND_TEXT = 0;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -78,15 +77,13 @@ public class ContactFragment extends Fragment {
         emailButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] myEmail = {"cookiecat9934@gmail.com"};
-                String[] customerSupport = {"customersupport@cookiecorner.ca"};
+                String[] supportEmail = {"customersupport@cookiecorner.ca"};
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
                 intent.setData(Uri.parse("mailto:"));
-                intent.putExtra(Intent.EXTRA_EMAIL, myEmail);
+                intent.putExtra(Intent.EXTRA_EMAIL, supportEmail);
                 intent.putExtra(Intent.EXTRA_SUBJECT, "Customer Support Inquiry");
-                intent.putExtra(Intent.EXTRA_CC, customerSupport);
-                intent.putExtra(Intent.EXTRA_TEXT, "Hello, I would like to know about the following: " +
+                intent.putExtra(Intent.EXTRA_TEXT, "Hello, I would like to know about the following: \n" +
                         "\n• Delivery Service" +
                         "\n• Menu Service" +
                         "\n• Office Hours" +
@@ -125,49 +122,18 @@ public class ContactFragment extends Fragment {
         textButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Check to see if we do not have the permission
-                if(ContextCompat.checkSelfPermission(getActivity(),
-                        Manifest.permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED){
-                    //If I do not have the permission have I already asked?
-                    if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(),
-                            Manifest.permission.SEND_SMS)){
-                        final AlertDialog alertDialog = new AlertDialog.Builder(getContext()).create();
-                        alertDialog.setTitle("Text Permission");
-                        alertDialog.setMessage("We need your approval to send a text message.");
-                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        alertDialog.dismiss();
-                                        ActivityCompat.requestPermissions(getActivity(),
-                                                new String[]{Manifest.permission.SEND_SMS},
-                                                PERMISSION_SEND_TEXT);
-                                    }
-                                });
-                        alertDialog.show();
-                    }
-                    //Request the permission
-                    else{
-                        ActivityCompat.requestPermissions(getActivity(),
-                                new String[]{Manifest.permission.SEND_SMS},
-                                PERMISSION_SEND_TEXT);
-                    }
-                }
-                else {
-                    Intent intent = new Intent(Intent.ACTION_SENDTO);
-                    intent.setData(Uri.parse("smsto:5192561128"));
-                    intent.putExtra("text_body", "Hello, I would like to know about the following: "+
-                            "\n• Delivery Service" +
-                            "\n• Menu Service" +
-                            "\n• Office Hours" +
-                            "\n• Booking Celebrations" +
-                            "\n• Seasonal Discounts");
-
-                    if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
-                        Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
-                    }else{
-                        startActivity(intent);
-                    }
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+                intent.setData(Uri.parse("smsto:5192561128"));
+                intent.putExtra("sms_body", "Hello, I would like to know about the following: \n"+
+                        "\n• Delivery Service" +
+                        "\n• Menu Service" +
+                        "\n• Office Hours" +
+                        "\n• Booking Celebrations" +
+                        "\n• Seasonal Discounts");
+                if (intent.resolveActivity(getActivity().getPackageManager()) != null) {
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }else{
+                    startActivity(intent);
                 }
             }
         });
@@ -195,6 +161,8 @@ public class ContactFragment extends Fragment {
                 Uri website = Uri.parse("http://www.cookiecorner.ca");
                 Intent intent = new Intent(Intent.ACTION_VIEW, website);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }else{
                     startActivity(intent);
                 }
             }
@@ -204,9 +172,11 @@ public class ContactFragment extends Fragment {
         instagramButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri instagram = Uri.parse("http://www.instagram.com");
+                Uri instagram = Uri.parse("http://www.instagram.com/cookiecorner");
                 Intent intent = new Intent(Intent.ACTION_VIEW, instagram);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                }else {
                     startActivity(intent);
                 }
             }
@@ -216,9 +186,11 @@ public class ContactFragment extends Fragment {
         twitterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri twitter = Uri.parse("http://www.twitter.com");
+                Uri twitter = Uri.parse("http://www.twitter.com/cookiecorner");
                 Intent intent = new Intent(Intent.ACTION_VIEW, twitter);
                 if(intent.resolveActivity(getActivity().getPackageManager()) != null){
+                    Snackbar.make(getView(), "No app installed", Snackbar.LENGTH_SHORT).show();
+                } else {
                     startActivity(intent);
                 }
             }
