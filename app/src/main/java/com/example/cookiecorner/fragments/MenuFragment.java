@@ -105,7 +105,6 @@ public class MenuFragment extends Fragment {
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if(convertView == null){
 
-
             }
             return convertView;
         }
