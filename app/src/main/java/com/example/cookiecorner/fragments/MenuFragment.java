@@ -104,7 +104,14 @@ public class MenuFragment extends Fragment {
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if(convertView == null){
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.menu_listview, parent, false);
 
+                //populating the textviews with the passed in values from the CookieMenuItem class
+                TextView name = convertView.findViewById(R.id.menuName);
+                name.setText(getItem(position).getName());
+
+                TextView price = convertView.findViewById(R.id.menuPrice);
+                price.setText("$ " + getItem(position).getPrice());
             }
             return convertView;
         }
