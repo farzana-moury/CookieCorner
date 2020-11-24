@@ -6,11 +6,14 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -89,6 +92,14 @@ public class MenuFragment extends Fragment {
         menu.add(new CookieMenuItem("cookie10", 2.75));
 
         listView.setAdapter(new CustomListViewAdapter(getContext(), menu));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("LOOKHERE", "" + position);
+                Navigation.findNavController(view).navigate(R.id.action_nav_menu_to_nav_contact);
+            }
+        });
 
         return view;
     }
