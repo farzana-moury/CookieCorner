@@ -83,10 +83,10 @@ public class CookieInfoFragment extends Fragment {
         menuImage.setImageResource(image);
 
         TextView menuDesc = view.findViewById(R.id.menuDescription);
-        menuTitle.setText(desc);
+        menuDesc.setText(desc);
 
         TextView menuPrice = view.findViewById(R.id.menuCost);
-        menuTitle.setText("$ " + price);
+        menuPrice.setText("$ " + price);
 
         return view;
     }
