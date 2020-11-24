@@ -1,6 +1,7 @@
 package com.example.cookiecorner.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.cookiecorner.CookieInfoFragment;
+import com.example.cookiecorner.MainActivity;
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.pojo.CookieMenuItem;
 
@@ -34,6 +37,12 @@ public class MenuFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+
+    private static final String TITLE = "TITLE";
+    private static final String IMAGE = "IMAGE";
+    private static final String DESC = "DESC";
+    private static final String PRICE = "PRICE";
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -76,9 +85,9 @@ public class MenuFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
-        ListView listView = view.findViewById(R.id.menuList);
+        final ListView listView = view.findViewById(R.id.menuList);
 
-        ArrayList<CookieMenuItem> menu = new ArrayList<>();
+        final ArrayList<CookieMenuItem> menu = new ArrayList<>();
 
         menu.add(new CookieMenuItem("cookie1", 1.00));
         menu.add(new CookieMenuItem("cookie2", 1.50));
@@ -96,8 +105,14 @@ public class MenuFragment extends Fragment {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("LOOKHERE", "" + position);
-                Navigation.findNavController(view).navigate(R.id.action_nav_menu_to_nav_contact);
+                Bundle bundle = new Bundle();
+
+                bundle.putString(TITLE, menu.get(position).getName());
+                bundle.putInt(IMAGE, R.drawable.logo);
+                bundle.putDouble(PRICE, menu.get(position).getPrice());
+                bundle.putString(DESC, "hello bro");
+
+                Navigation.findNavController(view).navigate(R.id.action_nav_menu_to_cookieInfoFragment, bundle);
             }
         });
 
