@@ -32,11 +32,15 @@ public class GalleryRecyclerViewAdapter extends RecyclerView.Adapter<GalleryRecy
 
     @Override
     public void onBindViewHolder(@NonNull CustomViewHolder holder, int position) {
-
+        GalleryItem galleryImage = images.get(position);
+        holder.image.setImageResource(galleryImage.getImage());
     }
 
     @Override
     public int getItemCount() {
+        if(images != null){
+            return images.size();
+        }
         return 0;
     }
 
