@@ -6,10 +6,12 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -36,6 +38,12 @@ public class RecipesFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private static final String TITLE = "TITLE";
+    private static final String IMAGE = "IMAGE";
+    private static final String DURATION = "DURATION";
+    private static final String CALORIES = "CALORIES";
+    private static final String INSTRUCTIONS = "INSTRUCTIONS";
 
     public RecipesFragment() {
         // Required empty public constructor
@@ -95,6 +103,21 @@ public class RecipesFragment extends Fragment {
 
 
         listView.setAdapter(new CustomListViewAdapter(getContext(), recipes));
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Bundle bundle = new Bundle();
+
+                bundle.putString(TITLE, recipes.get(position).getName());
+                bundle.putInt(IMAGE, recipes.get(position).getImage());
+                bundle.putString(DURATION, recipes.get(position).getDuration());
+                bundle.putString(CALORIES, recipes.get(position).getCalories());
+                bundle.putString(INSTRUCTIONS, recipes.get(position).getInstructions());
+
+                Navigation.findNavController(view).navigate(R.id.action_nav_recipes_to_recipeInfoFragment, bundle);
+            }
+        });
 
         return view;
     }
