@@ -7,8 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.pojo.RecipeItem;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +65,34 @@ public class RecipesFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_recipes, container, false);
+        View view = inflater.inflate(R.layout.fragment_recipes, container, false);
+
+        final ListView listView = view.findViewById(R.id.recipeList);
+
+        final ArrayList<RecipeItem> recipes = new ArrayList<>();
+
+        recipes.add(new RecipeItem("recipe1", R.drawable.logo,
+                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
+                        "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+
+        recipes.add(new RecipeItem("recipe2", R.drawable.logo,
+                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
+                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+
+        recipes.add(new RecipeItem("recipe3", R.drawable.logo,
+                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
+                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+
+        recipes.add(new RecipeItem("recipe4", R.drawable.logo,
+                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
+                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+
+        recipes.add(new RecipeItem("recipe5", R.drawable.logo,
+                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
+                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+
+        listView.setAdapter(new CustomListViewAdapter(getContext(), recipes));
+
+        return view;
     }
 }

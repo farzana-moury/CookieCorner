@@ -7,6 +7,14 @@ public class RecipeItem {
     private String ingredients;
     private String instructions;
 
+    public RecipeItem(String name, int image, String stats, String ingredients, String instructions) {
+        this.name = name;
+        this.image = image;
+        this.stats = stats;
+        this.ingredients = ingredients;
+        this.instructions = instructions;
+    }
+
     public String getName() {
         return name;
     }
