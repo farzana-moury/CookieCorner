@@ -1,4 +1,4 @@
-package com.example.cookiecorner;
+package com.example.cookiecorner.infoFragments;
 
 import android.os.Bundle;
 
@@ -10,19 +10,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.cookiecorner.fragments.MenuFragment;
+import com.example.cookiecorner.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link CookieInfoFragment#newInstance} factory method to
+ * Use the {@link RecipeInfoFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class CookieInfoFragment extends Fragment {
+public class RecipeInfoFragment extends Fragment {
 
     String title = "no_value";
     int image = R.drawable.logo;
-    String desc = "no_value";
-    double price = 0.00;
+    String duration = "no_value";
+    String calories = "no_value";
+    String instructions = "no_value";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -33,7 +34,7 @@ public class CookieInfoFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public CookieInfoFragment() {
+    public RecipeInfoFragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +44,11 @@ public class CookieInfoFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment CookieInfoFragment.
+     * @return A new instance of fragment RecipeInfoFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CookieInfoFragment newInstance(String param1, String param2) {
-        CookieInfoFragment fragment = new CookieInfoFragment();
+    public static RecipeInfoFragment newInstance(String param1, String param2) {
+        RecipeInfoFragment fragment = new RecipeInfoFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -58,15 +59,15 @@ public class CookieInfoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
 
             title = getArguments().getString("TITLE");
             image = getArguments().getInt("IMAGE");
-            price = getArguments().getDouble("PRICE");
-            desc = getArguments().getString("DESC");
+            duration = getArguments().getString("DURATION");
+            calories = getArguments().getString("CALORIES");
+            instructions = getArguments().getString("INSTRUCTIONS");
         }
     }
 
@@ -74,19 +75,22 @@ public class CookieInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_cookie_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_recipe_info, container, false);
 
-        TextView menuTitle = view.findViewById(R.id.menuTitle);
-        menuTitle.setText(title);
+        TextView recipeTitle = view.findViewById(R.id.recipeTitle);
+        recipeTitle.setText(title);
 
-        ImageView menuImage = view.findViewById(R.id.menuImage);
-        menuImage.setImageResource(image);
+        ImageView recipeImage = view.findViewById(R.id.recipePic);
+        recipeImage.setImageResource(image);
 
-        TextView menuDesc = view.findViewById(R.id.menuDescription);
-        menuDesc.setText(desc);
+        TextView durationTime = view.findViewById(R.id.recipeDuration);
+        durationTime.setText("Duration (prep + bake time): " + duration);
 
-        TextView menuPrice = view.findViewById(R.id.menuCost);
-        menuPrice.setText("$ " + price);
+        TextView caloriesVal = view.findViewById(R.id.recipeCalories);
+        caloriesVal.setText("Calories (per cookie): " + calories);
+
+        TextView recipeInstruct = view.findViewById(R.id.recipeDesc);
+        recipeInstruct.setText(instructions);
 
         return view;
     }

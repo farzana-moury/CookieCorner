@@ -1,7 +1,6 @@
-package com.example.cookiecorner.fragments;
+package com.example.cookiecorner.viewFragments;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -9,9 +8,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -19,8 +16,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.cookiecorner.CookieInfoFragment;
-import com.example.cookiecorner.MainActivity;
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.pojo.CookieMenuItem;
 

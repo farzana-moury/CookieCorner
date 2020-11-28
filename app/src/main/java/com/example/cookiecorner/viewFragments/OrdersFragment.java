@@ -1,4 +1,4 @@
-package com.example.cookiecorner.fragments;
+package com.example.cookiecorner.viewFragments;
 
 import android.os.Bundle;
 
@@ -12,10 +12,10 @@ import com.example.cookiecorner.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link GalleryFragment#newInstance} factory method to
+ * Use the {@link OrdersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class GalleryFragment extends Fragment {
+public class OrdersFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -26,7 +26,7 @@ public class GalleryFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public GalleryFragment() {
+    public OrdersFragment() {
         // Required empty public constructor
     }
 
@@ -36,11 +36,11 @@ public class GalleryFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment GalleryFragment.
+     * @return A new instance of fragment OrdersFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static GalleryFragment newInstance(String param1, String param2) {
-        GalleryFragment fragment = new GalleryFragment();
+    public static OrdersFragment newInstance(String param1, String param2) {
+        OrdersFragment fragment = new OrdersFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -61,6 +61,6 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gallery, container, false);
+        return inflater.inflate(R.layout.fragment_orders, container, false);
     }
 }

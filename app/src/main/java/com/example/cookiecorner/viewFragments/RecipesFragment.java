@@ -1,4 +1,4 @@
-package com.example.cookiecorner.fragments;
+package com.example.cookiecorner.viewFragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,7 +18,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.cookiecorner.R;
-import com.example.cookiecorner.pojo.CookieMenuItem;
 import com.example.cookiecorner.pojo.RecipeItem;
 
 import java.util.ArrayList;
