@@ -44,7 +44,11 @@
         android:id="@+id/nav_recipes"
         android:name="com.example.cookiecorner.fragments.RecipesFragment"
         android:label="@string/nav_recipes"
-        tools:layout="@layout/fragment_recipes" />
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_nav_recipes_to_recipeInfoFragment"
+            app:destination="@id/recipeInfoFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_account"
         android:name="com.example.cookiecorner.fragments.AccountFragment"
@@ -80,4 +84,9 @@
         android:name="com.example.cookiecorner.CookieInfoFragment"
         android:label="OUR MENU"
         tools:layout="@layout/fragment_cookie_info" />
+    <fragment
+        android:id="@+id/recipeInfoFragment"
+        android:name="com.example.cookiecorner.RecipeInfoFragment"
+        android:label="RECIPES"
+        tools:layout="@layout/fragment_recipe_info" />
 </navigation>
