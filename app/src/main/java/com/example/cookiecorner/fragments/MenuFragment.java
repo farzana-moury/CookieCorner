@@ -121,7 +121,7 @@ public class MenuFragment extends Fragment {
 
     public class CustomListViewAdapter extends ArrayAdapter<CookieMenuItem> {
 
-        //CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), godItemArrayList)
+        //CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
         public CustomListViewAdapter(@NonNull Context context, ArrayList<CookieMenuItem> items) {
             super(context, 0, items);
         }

@@ -3,15 +3,15 @@ package com.example.cookiecorner.pojo;
 public class RecipeItem {
     private String name;
     private int image;
-    private String stats;
-    private String ingredients;
+    private String duration;
+    private String calories;
     private String instructions;
 
-    public RecipeItem(String name, int image, String stats, String ingredients, String instructions) {
+    public RecipeItem(String name, int image, String duration, String calories, String instructions) {
         this.name = name;
         this.image = image;
-        this.stats = stats;
-        this.ingredients = ingredients;
+        this.duration = duration;
+        this.calories = calories;
         this.instructions = instructions;
     }
 
@@ -31,20 +31,20 @@ public class RecipeItem {
         this.image = image;
     }
 
-    public String getStats() {
-        return stats;
+    public String getDuration() {
+        return duration;
     }
 
-    public void setStats(String stats) {
-        this.stats = stats;
+    public void setDuration(String duration) {
+        this.duration = duration;
     }
 
-    public String getIngredients() {
-        return ingredients;
+    public String getCalories() {
+        return calories;
     }
 
-    public void setIngredients(String ingredients) {
-        this.ingredients = ingredients;
+    public void setCalories(String calories) {
+        this.calories = calories;
     }
 
     public String getInstructions() {

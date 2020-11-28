@@ -1,15 +1,22 @@
 package com.example.cookiecorner.fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.pojo.CookieMenuItem;
 import com.example.cookiecorner.pojo.RecipeItem;
 
 import java.util.ArrayList;
@@ -72,27 +79,53 @@ public class RecipesFragment extends Fragment {
         final ArrayList<RecipeItem> recipes = new ArrayList<>();
 
         recipes.add(new RecipeItem("recipe1", R.drawable.logo,
-                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
-                        "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+                "1h 00m", "100 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
 
         recipes.add(new RecipeItem("recipe2", R.drawable.logo,
-                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
-                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+                "2h 00m", "350 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
 
         recipes.add(new RecipeItem("recipe3", R.drawable.logo,
-                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
-                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+                "1h 20m", "150 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
 
         recipes.add(new RecipeItem("recipe4", R.drawable.logo,
-                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
-                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+                "2h 15m", "100 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
 
         recipes.add(new RecipeItem("recipe5", R.drawable.logo,
-                "Calories: 100 \nDuration: 1 h \nPrep: 30 min \nBake: 30 min", "• flour\n• brown sugar\n• chocolate chips",
-                "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+                "1h 30m", "200 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+
 
         listView.setAdapter(new CustomListViewAdapter(getContext(), recipes));
 
         return view;
+    }
+
+    public class CustomListViewAdapter extends ArrayAdapter<RecipeItem> {
+
+        //CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
+        public CustomListViewAdapter(@NonNull Context context, ArrayList<RecipeItem> items) {
+            super(context, 0, items);
+        }
+
+        @NonNull
+        @Override
+        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+            if(convertView == null){
+                convertView = LayoutInflater.from(getContext()).inflate(R.layout.recipes_listview, parent, false);
+
+                //populating the textviews with the passed in values from the CookieMenuItem class
+                TextView name = convertView.findViewById(R.id.recipeName);
+                name.setText(getItem(position).getName());
+
+                ImageView image = convertView.findViewById(R.id.recipeImage);
+                image.setImageResource(getItem(position).getImage());
+
+                TextView duration = convertView.findViewById(R.id.duration);
+                duration.setText(getItem(position).getDuration());
+
+                TextView calories = convertView.findViewById(R.id.calories);
+                calories.setText("" + getItem(position).getCalories());
+            }
+            return convertView;
+        }
     }
 }
