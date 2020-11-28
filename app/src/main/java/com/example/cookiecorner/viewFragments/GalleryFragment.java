@@ -87,10 +87,8 @@ public class GalleryFragment extends Fragment {
         images.add(new GalleryItem(R.drawable.red));
         images.add(new GalleryItem(R.drawable.logo));
 
-
-
         //layout manager
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
         //setting an adapter
         recyclerView.setAdapter(new GalleryRecyclerViewAdapter(images));
