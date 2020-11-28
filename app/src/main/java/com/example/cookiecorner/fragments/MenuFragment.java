@@ -89,16 +89,16 @@ public class MenuFragment extends Fragment {
 
         final ArrayList<CookieMenuItem> menu = new ArrayList<>();
 
-        menu.add(new CookieMenuItem("cookie1", 1.00));
-        menu.add(new CookieMenuItem("cookie2", 1.50));
-        menu.add(new CookieMenuItem("cookie3", 1.00));
-        menu.add(new CookieMenuItem("cookie4", 2.00));
-        menu.add(new CookieMenuItem("cookie5", 2.50));
-        menu.add(new CookieMenuItem("cookie6", 2.50));
-        menu.add(new CookieMenuItem("cookie7", 3.00));
-        menu.add(new CookieMenuItem("cookie8", 3.25));
-        menu.add(new CookieMenuItem("cookie9", 3.50));
-        menu.add(new CookieMenuItem("cookie10", 2.75));
+        menu.add(new CookieMenuItem("cookie1", 1.00, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie2", 1.50,  R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie3", 1.00, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie4", 2.00, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie5", 2.50, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie6", 2.50, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie7", 3.00, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie8", 3.25, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie9", 3.50, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("cookie10", 2.75, R.drawable.logo, "cookie description goes here"));
 
         listView.setAdapter(new CustomListViewAdapter(getContext(), menu));
 
@@ -108,9 +108,9 @@ public class MenuFragment extends Fragment {
                 Bundle bundle = new Bundle();
 
                 bundle.putString(TITLE, menu.get(position).getName());
-                bundle.putInt(IMAGE, R.drawable.logo);
+                bundle.putInt(IMAGE, menu.get(position).getImage());
                 bundle.putDouble(PRICE, menu.get(position).getPrice());
-                bundle.putString(DESC, "hello bro");
+                bundle.putString(DESC, menu.get(position).getDescription());
 
                 Navigation.findNavController(view).navigate(R.id.action_nav_menu_to_cookieInfoFragment, bundle);
             }
