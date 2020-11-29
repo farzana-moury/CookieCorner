@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.cookiecorner.R;
 
@@ -17,33 +19,36 @@ import com.example.cookiecorner.R;
  */
 public class RatingsInfoFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    //the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private static final String NAME = "name";
+    private static final String IMAGE = "image";
+    private static final String REVIEW = "review";
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    //types of parameters
+    private String name;
+    private int image;
+    private String review;
 
     public RatingsInfoFragment() {
         // Required empty public constructor
     }
 
     /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * Instance contains information to be displayed
+     * in the Ratings page
      *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
+     * @param name Customer Name.
+     * @param image Customer Picture.
+     * @param review Customer Review.
      * @return A new instance of fragment RatingsInfoFragment.
      */
-    // TODO: Rename and change types and number of parameters
-    public static RatingsInfoFragment newInstance(String param1, String param2) {
+
+    public static RatingsInfoFragment newInstance(String name, int image, String review) {
         RatingsInfoFragment fragment = new RatingsInfoFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putString(NAME, name);
+        args.putInt(IMAGE, image);
+        args.putString(REVIEW, review);
         fragment.setArguments(args);
         return fragment;
     }
@@ -52,8 +57,9 @@ public class RatingsInfoFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            name = getArguments().getString(NAME);
+            image = getArguments().getInt(IMAGE);
+            review = getArguments().getString(REVIEW);
         }
     }
 
@@ -61,6 +67,21 @@ public class RatingsInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ratings_info, container, false);
+        View view = inflater.inflate(R.layout.fragment_ratings_info, container, false);
+
+        if(name != null) {
+            TextView customerName = view.findViewById(R.id.customerName);
+            customerName.setText(name);
+        }
+        if(image != 0) {
+            ImageView customerImage = view.findViewById(R.id.customerPic);
+            customerImage.setImageResource(image);
+        }
+        if(review != null) {
+            TextView customerReview = view.findViewById(R.id.customerReview);
+            customerReview.setText(review);
+        }
+
+        return view;
     }
 }
