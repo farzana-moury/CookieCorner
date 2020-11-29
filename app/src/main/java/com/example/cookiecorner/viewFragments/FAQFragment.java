@@ -3,12 +3,17 @@ package com.example.cookiecorner.viewFragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.pojo.FAQItem;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +66,30 @@ public class FAQFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_f_a_q, container, false);
+        View view = inflater.inflate(R.layout.fragment_f_a_q, container, false);
+
+        //recyclerView we are going to use
+        RecyclerView recyclerView = view.findViewById(R.id.faqRecyclerView);
+
+        //list of faq items (each item consists of question and answer)
+        ArrayList<FAQItem> faqList = new ArrayList<>();
+
+        //populating the faq arrayList
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+        faqList.add(new FAQItem("What is your favourite cookie?", "Chocolate Chip"));
+        faqList.add(new FAQItem("Can we add gelatin for texture?", "Yes, for filling or the dough! Hoewever, this could change the bake time and temperature and whatnot"));
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+
+        //layout manager
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
+        //setting an adapter
+        recyclerView.setAdapter(new FAQRecyclerViewAdapter(faqList));
+
+        return view;
     }
 }
