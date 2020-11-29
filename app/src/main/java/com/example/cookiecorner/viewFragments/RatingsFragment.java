@@ -2,13 +2,18 @@ package com.example.cookiecorner.viewFragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.infoFragments.RatingsInfoFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +66,43 @@ public class RatingsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ratings, container, false);
+        View view = inflater.inflate(R.layout.fragment_ratings, container, false);
+
+        CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
+        ViewPager viewPager = view.findViewById(R.id.ratingsViewPager);
+        viewPager.setAdapter(adapter);
+
+        return view;
+    }
+
+    public class CustomViewPagerAdapter extends FragmentPagerAdapter {
+
+        public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
+            super(fm);
+        }
+
+        @NonNull
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 0: return RatingsInfoFragment.newInstance("Farzana Moury", R.drawable.logo,
+                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+                case 1: return RatingsInfoFragment.newInstance("Luke Skywalker", R.drawable.logo,
+                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+                case 2: return RatingsInfoFragment.newInstance("Anakin", R.drawable.logo,
+                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+                case 3: return RatingsInfoFragment.newInstance("Ariel Winter", R.drawable.logo,
+                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+                case 4: return RatingsInfoFragment.newInstance("Linda Baker", R.drawable.logo,
+                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+                default: return RatingsInfoFragment.newInstance("No name", R.drawable.logo,
+                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+            }
+        }
+
+        @Override
+        public int getCount() {
+            return 5;
+        }
     }
 }
