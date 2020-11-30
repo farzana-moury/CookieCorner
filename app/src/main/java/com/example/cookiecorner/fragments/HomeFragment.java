@@ -67,6 +67,7 @@ public class HomeFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         MainActivity.fab.hide();
+        MainActivity.fab.setImageResource(R.drawable.ic_baseline_brush_24);
 
         Button accountButton = view.findViewById(R.id.accountButton);
         accountButton.setOnClickListener(new View.OnClickListener() {
