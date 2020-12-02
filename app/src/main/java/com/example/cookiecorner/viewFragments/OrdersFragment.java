@@ -31,6 +31,7 @@ public class OrdersFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    CustomListViewAdapter adapter;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -90,7 +91,10 @@ public class OrdersFragment extends Fragment {
         orders.add(new CookieMenuItem("cookie9", 3.50, R.drawable.logo, "cookie description goes here"));
         orders.add(new CookieMenuItem("cookie10", 2.75, R.drawable.logo, "cookie description goes here"));
 
-        listView.setAdapter(new OrdersFragment.CustomListViewAdapter(getContext(), orders));
+        adapter = new OrdersFragment.CustomListViewAdapter(getContext(), orders);
+        listView.setAdapter(adapter);
+
+        adapter.notifyDataSetChanged(); //letting the adapter know we removed an item (refreshes the view)
 
         return view;
     }
@@ -111,6 +115,7 @@ public class OrdersFragment extends Fragment {
                 //populating the textviews with the passed in values from the CookieMenuItem class
                 TextView name = convertView.findViewById(R.id.orderName);
                 name.setText(getItem(position).getName());
+
 
             }
             return convertView;
