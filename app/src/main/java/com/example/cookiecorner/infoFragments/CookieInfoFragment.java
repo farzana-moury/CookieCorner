@@ -7,10 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.ShoppingCart;
+import com.example.cookiecorner.viewFragments.MenuFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -74,7 +77,7 @@ public class CookieInfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_cookie_info, container, false);
+        final View view = inflater.inflate(R.layout.fragment_cookie_info, container, false);
 
         TextView menuTitle = view.findViewById(R.id.menuTitle);
         menuTitle.setText(title);
@@ -87,6 +90,8 @@ public class CookieInfoFragment extends Fragment {
 
         TextView menuPrice = view.findViewById(R.id.menuCost);
         menuPrice.setText("$ " + price);
+
+
 
         return view;
     }

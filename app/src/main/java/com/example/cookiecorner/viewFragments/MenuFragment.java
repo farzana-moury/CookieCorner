@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -38,6 +39,8 @@ public class MenuFragment extends Fragment {
     private static final String IMAGE = "IMAGE";
     private static final String DESC = "DESC";
     private static final String PRICE = "PRICE";
+
+    public static int cookiePosition = 0;
 
 
     // TODO: Rename and change types of parameters
@@ -107,6 +110,8 @@ public class MenuFragment extends Fragment {
                 bundle.putInt(IMAGE, menu.get(position).getImage());
                 bundle.putDouble(PRICE, menu.get(position).getPrice());
                 bundle.putString(DESC, menu.get(position).getDescription());
+
+                cookiePosition = position;
 
                 Navigation.findNavController(view).navigate(R.id.action_nav_menu_to_cookieInfoFragment, bundle);
             }

@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.cookiecorner.MainActivity;
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.ShoppingCart;
 import com.example.cookiecorner.pojo.CookieMenuItem;
 
 import java.util.ArrayList;
@@ -78,18 +79,18 @@ public class OrdersFragment extends Fragment {
 
         MainActivity.fab.show();
 
-        ArrayList<CookieMenuItem> orders = new ArrayList<>();
+        ArrayList<CookieMenuItem> orders = ShoppingCart.getInstance().getShoppingList();
 
-        orders.add(new CookieMenuItem("cookie1", 1.00, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie2", 1.50,  R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie3", 1.00, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie4", 2.00, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie5", 2.50, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie6", 2.50, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie7", 3.00, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie8", 3.25, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie9", 3.50, R.drawable.logo, "cookie description goes here"));
-        orders.add(new CookieMenuItem("cookie10", 2.75, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie1", 1.00, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie2", 1.50,  R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie3", 1.00, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie4", 2.00, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie5", 2.50, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie6", 2.50, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie7", 3.00, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie8", 3.25, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie9", 3.50, R.drawable.logo, "cookie description goes here"));
+//        orders.add(new CookieMenuItem("cookie10", 2.75, R.drawable.logo, "cookie description goes here"));
 
         adapter = new OrdersFragment.CustomListViewAdapter(getContext(), orders);
         listView.setAdapter(adapter);
