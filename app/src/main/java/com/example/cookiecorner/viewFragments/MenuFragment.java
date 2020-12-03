@@ -87,17 +87,6 @@ public class MenuFragment extends Fragment {
         final ListView listView = view.findViewById(R.id.menuList);
 
         final ArrayList<CookieMenuItem> menu = ShoppingCart.menu;
-//
-//        menu.add(new CookieMenuItem("cookie1", 1.00, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie2", 1.50,  R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie3", 1.00, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie4", 2.00, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie5", 2.50, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie6", 2.50, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie7", 3.00, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie8", 3.25, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie9", 3.50, R.drawable.logo, "cookie description goes here"));
-//        menu.add(new CookieMenuItem("cookie10", 2.75, R.drawable.logo, "cookie description goes here"));
 
         listView.setAdapter(new CustomListViewAdapter(getContext(), menu));
 

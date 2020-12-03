@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -73,7 +74,7 @@ public class OrdersFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_orders, container, false);
+        final View view = inflater.inflate(R.layout.fragment_orders, container, false);
 
         final ListView listView = view.findViewById(R.id.ordersList);
 
@@ -81,21 +82,12 @@ public class OrdersFragment extends Fragment {
 
         ArrayList<CookieMenuItem> orders = ShoppingCart.getInstance().getShoppingList();
 
-//        orders.add(new CookieMenuItem("cookie1", 1.00, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie2", 1.50,  R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie3", 1.00, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie4", 2.00, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie5", 2.50, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie6", 2.50, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie7", 3.00, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie8", 3.25, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie9", 3.50, R.drawable.logo, "cookie description goes here"));
-//        orders.add(new CookieMenuItem("cookie10", 2.75, R.drawable.logo, "cookie description goes here"));
-
         adapter = new OrdersFragment.CustomListViewAdapter(getContext(), orders);
-        listView.setAdapter(adapter);
+
 
         adapter.notifyDataSetChanged(); //letting the adapter know we removed an item (refreshes the view)
+
+        listView.setAdapter(adapter);
 
         return view;
     }
@@ -109,7 +101,7 @@ public class OrdersFragment extends Fragment {
 
         @NonNull
         @Override
-        public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if(convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.orders_listview, parent, false);
 
@@ -117,6 +109,16 @@ public class OrdersFragment extends Fragment {
                 TextView name = convertView.findViewById(R.id.orderName);
                 name.setText(getItem(position).getName());
 
+                Button removeOrder = convertView.findViewById(R.id.removeOrderButton);
+                removeOrder.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        System.out.println("hello");
+                        System.out.println(MenuFragment.cookiePosition);
+                        int index = ShoppingCart.getInstance().getShoppingList().indexOf(getItem(position));
+                        ShoppingCart.getInstance().getShoppingList().remove(index);
+                    }
+                });
 
             }
             return convertView;
