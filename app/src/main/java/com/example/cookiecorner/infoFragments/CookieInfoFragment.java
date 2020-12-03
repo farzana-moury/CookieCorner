@@ -91,7 +91,14 @@ public class CookieInfoFragment extends Fragment {
         TextView menuPrice = view.findViewById(R.id.menuCost);
         menuPrice.setText("$ " + price);
 
-
+        Button placeOrder = view.findViewById(R.id.placeOrderButton);
+        placeOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //adding the selected menu cookie to the orders shopping list
+                ShoppingCart.getInstance().getShoppingList().add(ShoppingCart.menu.get(MenuFragment.cookiePosition));
+            }
+        });
 
         return view;
     }
