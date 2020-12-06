@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
@@ -57,6 +58,20 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id){
+            case R.id.action_settings: {
+                //Launch the settings activity
+                Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+                MainActivity.this.startActivity(intent);
+            break;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
