@@ -8,7 +8,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
+import com.example.cookiecorner.Credentials;
 import com.example.cookiecorner.R;
 
 /**
@@ -26,6 +29,15 @@ public class AccountFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private EditText name;
+    private EditText location;
+    private EditText cardNumber;
+    private EditText cardHolder;
+    private EditText expiryDate;
+    private EditText cvc;
+
+    public static Credentials credentials;
 
     public AccountFragment() {
         // Required empty public constructor
@@ -62,12 +74,53 @@ public class AccountFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_account, container, false);
+        View view = inflater.inflate(R.layout.fragment_account, container, false);
+
+        name = view.findViewById(R.id.nameEditText);
+        location = view.findViewById(R.id.addressEditText);
+        cardNumber = view.findViewById(R.id.cardEditText);
+        cardHolder = view.findViewById(R.id.accNameEditText);
+        expiryDate = view.findViewById(R.id.expDateEditText);
+        cvc = view.findViewById(R.id.cvcEditText);
+
+
+
+        Button saveButton = view.findViewById(R.id.saveButton);
+
+        saveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                credentials = Credentials.getInstance();
+
+                //setting the account name
+                String nameToStore = name.getText().toString();
+                credentials.setAccName(nameToStore);
+                name.setText(credentials.getAccName());
+
+                //setting the delivery location
+                String addressToStore = location.getText().toString();
+                credentials.setAccLocation(addressToStore);
+                location.setText(credentials.getAccLocation());
+
+                //setting the payment information
+
+
+            }
+        });
+
+
+        return view;
     }
 
     @Override
     public void onResume() {
         super.onResume();
+
+        name.setText(credentials.getAccName());
+        location.setText(credentials.getAccLocation());
+
+
         Log.d("watchMe", "accountOnResume");
     }
 }
