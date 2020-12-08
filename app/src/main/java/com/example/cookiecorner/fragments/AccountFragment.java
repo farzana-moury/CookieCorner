@@ -14,6 +14,8 @@ import android.widget.EditText;
 import com.example.cookiecorner.Credentials;
 import com.example.cookiecorner.R;
 
+import static com.example.cookiecorner.Credentials.credentials;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link AccountFragment#newInstance} factory method to
@@ -36,8 +38,6 @@ public class AccountFragment extends Fragment {
     private EditText cardHolder;
     private EditText expiryDate;
     private EditText cvc;
-
-    public static Credentials credentials;
 
     public AccountFragment() {
         // Required empty public constructor
@@ -84,45 +84,33 @@ public class AccountFragment extends Fragment {
         cvc = view.findViewById(R.id.cvcEditText);
 
 
-
         Button saveButton = view.findViewById(R.id.saveButton);
 
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                credentials = Credentials.getInstance();
-
                 //setting the account name
-                String nameToStore = name.getText().toString();
-                credentials.setAccName(nameToStore);
-                name.setText(credentials.getAccName());
+                credentials.setAccName(name.getText().toString());
+
 
                 //setting the delivery location
-                String addressToStore = location.getText().toString();
-                credentials.setAccLocation(addressToStore);
-                location.setText(credentials.getAccLocation());
+                credentials.setAccLocation(location.getText().toString());
+
 
                 //setting the payment information
-                String cardToStore = cardNumber.getText().toString();
-                credentials.setAccCard(cardToStore);
-                cardNumber.setText(credentials.getAccCard());
+                credentials.setAccCard(cardNumber.getText().toString());
 
-                String holderToStore = cardHolder.getText().toString();
-                credentials.setAccHolder(holderToStore);
-                cardHolder.setText(credentials.getAccHolder());
 
-                String dateToStore = expiryDate.getText().toString();
-                credentials.setExpDate(dateToStore);
-                expiryDate.setText(credentials.getExpDate());
+                credentials.setAccHolder(cardHolder.getText().toString());
 
-                String cvcToStore = cvc.getText().toString();
-                credentials.setAccCvc(cvcToStore);
-                cvc.setText(credentials.getAccCvc());
+
+                credentials.setExpDate(expiryDate.getText().toString());
+
+
+                credentials.setAccCvc(cvc.getText().toString());
 
             }
         });
-
 
         return view;
     }

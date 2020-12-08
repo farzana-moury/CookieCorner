@@ -8,7 +8,7 @@ public class Credentials {
     private static String EXP_DATE;
     private static String ACC_CVC;
 
-    private static Credentials credentials;
+    public static Credentials credentials;
 
     private Credentials(){
         ACC_NAME = "";
