@@ -3,6 +3,7 @@ package com.example.cookiecorner.viewFragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -76,19 +77,19 @@ public class GalleryFragment extends Fragment {
         ArrayList<GalleryItem> images = new ArrayList<>();
 
         //populating the images arrayList
-        images.add(new GalleryItem(R.drawable.red));
-        images.add(new GalleryItem(R.drawable.logo));
-        images.add(new GalleryItem(R.drawable.logo));
-        images.add(new GalleryItem(R.drawable.red));
-        images.add(new GalleryItem(R.drawable.red));
-        images.add(new GalleryItem(R.drawable.logo));
-        images.add(new GalleryItem(R.drawable.logo));
-        images.add(new GalleryItem(R.drawable.red));
-        images.add(new GalleryItem(R.drawable.red));
-        images.add(new GalleryItem(R.drawable.logo));
+        images.add(new GalleryItem(R.drawable.b));
+        images.add(new GalleryItem(R.drawable.c1));
+        images.add(new GalleryItem(R.drawable.c5));
+        images.add(new GalleryItem(R.drawable.c3));
+        images.add(new GalleryItem(R.drawable.c2));
+        images.add(new GalleryItem(R.drawable.c7));
+        images.add(new GalleryItem(R.drawable.c6));
+        images.add(new GalleryItem(R.drawable.c8));
+        images.add(new GalleryItem(R.drawable.c4));
+        images.add(new GalleryItem(R.drawable.c9));
 
         //layout manager
-        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
 
         //setting an adapter
         recyclerView.setAdapter(new GalleryRecyclerViewAdapter(images));
