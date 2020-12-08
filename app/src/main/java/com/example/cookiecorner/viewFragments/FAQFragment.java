@@ -75,14 +75,17 @@ public class FAQFragment extends Fragment {
         ArrayList<FAQItem> faqList = new ArrayList<>();
 
         //populating the faq arrayList
-        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
-        faqList.add(new FAQItem("What is your favourite cookie?", "Chocolate Chip"));
-        faqList.add(new FAQItem("Can we add gelatin for texture?", "Yes, for filling or the dough! Hoewever, this could change the bake time and temperature and whatnot"));
-        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
-        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
-        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
-        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
-        faqList.add(new FAQItem("How long does it take to bake a cookie?", "Depends on the recipe"));
+        faqList.add(new FAQItem("What is your best selling cookie?", "Over the years we've mixed and mashed different cookies, but overall the most popular cookie is the" +
+                " peanut butter cookie, mostly because of its texture and melty flavour."));
+        faqList.add(new FAQItem("Where can I find the best cookie recipe?", "On our website of course! visit www.cookiecorner.ca to access all of our best recipes."));
+        faqList.add(new FAQItem("Can we add gelatin for texture?", "Yes! As long as you get the consistency and measurements, you can make your own jello cookie!"));
+        faqList.add(new FAQItem("Are the cookies 100% halal?", "Yes! We take into consideration the whole community to meet their needs. Everyone is welcome to enjoy."));
+        faqList.add(new FAQItem("How long does it take to bake a cookie?", "It all depends on the recipe. On average, a batch of cookies can take around 1.5 hours."));
+        faqList.add(new FAQItem("How was Cookie Corner founded?", "Well it was an idea that my ancestors came up with. The neighbourhood needed a sweet shop - " +
+                "so we opened a bakery at the heart of Windsor!"));
+        faqList.add(new FAQItem("Is the bakery solely based in Canada?", "So far we've had this family business for the past 50 years. We have other bakeries across the province" +
+                " of Ontario and plan to branch out to other provinces. Who knows? We may decide to internationally brand in the future."));
+
 
         //layout manager
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
