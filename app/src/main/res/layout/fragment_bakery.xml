@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/side_nav_bar"
+    android:background="@drawable/background"
     android:gravity="center"
     android:orientation="vertical"
     tools:context=".fragments.BakeryFragment">
@@ -14,8 +14,12 @@
         android:layout_height="@dimen/homeButtonsHeight"
         android:layout_gravity="center"
         android:layout_margin="@dimen/descriptionPadding"
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="@color/colorPrimary"
+        android:hapticFeedbackEnabled="false"
         android:text="@string/gallery_name"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background" />
 
     <Button
         android:id="@+id/ratingsButton"
@@ -23,8 +27,12 @@
         android:layout_height="@dimen/homeButtonsHeight"
         android:layout_gravity="center"
         android:layout_margin="@dimen/descriptionPadding"
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="@color/colorPrimary"
+        android:hapticFeedbackEnabled="false"
         android:text="@string/ratings_name"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:textColor="@color/cardview_light_background" />
 
     <Button
         android:id="@+id/faqButton"
@@ -32,5 +40,9 @@
         android:layout_height="@dimen/homeButtonsHeight"
         android:layout_gravity="center"
         android:layout_margin="@dimen/descriptionPadding"
-        android:text="@string/faq_name" />
+        android:background="@drawable/side_nav_bar"
+        android:backgroundTint="@color/colorPrimary"
+        android:hapticFeedbackEnabled="false"
+        android:text="@string/faq_name"
+        android:textColor="@color/cardview_light_background" />
 </LinearLayout>
