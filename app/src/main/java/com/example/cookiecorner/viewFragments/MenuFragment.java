@@ -100,8 +100,6 @@ public class MenuFragment extends Fragment {
                 bundle.putDouble(PRICE, menu.get(position).getPrice());
                 bundle.putString(DESC, menu.get(position).getDescription());
 
-                cookiePosition = position;
-
                 Navigation.findNavController(view).navigate(R.id.action_nav_menu_to_cookieInfoFragment, bundle);
             }
         });
@@ -128,6 +126,8 @@ public class MenuFragment extends Fragment {
 
                 TextView price = convertView.findViewById(R.id.menuPrice);
                 price.setText("$ " + getItem(position).getPrice());
+
+                cookiePosition = position;
             }
             return convertView;
         }
