@@ -3,10 +3,10 @@ package com.example.cookiecorner;
 public class Credentials {
     private static String ACC_NAME;
     private static String ACC_LOCATION;
-    private static int ACC_CARD;
+    private static String ACC_CARD;
     private static String ACC_HOLDER;
     private static String EXP_DATE;
-    private static int ACC_CVC;
+    private static String ACC_CVC;
 
     private static Credentials credentials;
 
@@ -38,11 +38,11 @@ public class Credentials {
         ACC_LOCATION = accLocation;
     }
 
-    public static int getAccCard() {
+    public static String getAccCard() {
         return ACC_CARD;
     }
 
-    public static void setAccCard(int accCard) {
+    public static void setAccCard(String accCard) {
         ACC_CARD = accCard;
     }
 
@@ -62,11 +62,11 @@ public class Credentials {
         EXP_DATE = expDate;
     }
 
-    public static int getAccCvc() {
+    public static String getAccCvc() {
         return ACC_CVC;
     }
 
-    public static void setAccCvc(int accCvc) {
+    public static void setAccCvc(String accCvc) {
         ACC_CVC = accCvc;
     }
 }

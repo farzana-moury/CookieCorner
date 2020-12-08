@@ -104,7 +104,21 @@ public class AccountFragment extends Fragment {
                 location.setText(credentials.getAccLocation());
 
                 //setting the payment information
+                String cardToStore = cardNumber.getText().toString();
+                credentials.setAccCard(cardToStore);
+                cardNumber.setText(credentials.getAccCard());
 
+                String holderToStore = cardHolder.getText().toString();
+                credentials.setAccHolder(holderToStore);
+                cardHolder.setText(credentials.getAccHolder());
+
+                String dateToStore = expiryDate.getText().toString();
+                credentials.setExpDate(dateToStore);
+                expiryDate.setText(credentials.getExpDate());
+
+                String cvcToStore = cvc.getText().toString();
+                credentials.setAccCvc(cvcToStore);
+                cvc.setText(credentials.getAccCvc());
 
             }
         });
@@ -119,7 +133,10 @@ public class AccountFragment extends Fragment {
 
         name.setText(credentials.getAccName());
         location.setText(credentials.getAccLocation());
-
+        cardNumber.setText(credentials.getAccCard());
+        cardHolder.setText(credentials.getAccHolder());
+        expiryDate.setText(credentials.getExpDate());
+        cvc.setText(credentials.getAccCvc());
 
         Log.d("watchMe", "accountOnResume");
     }
