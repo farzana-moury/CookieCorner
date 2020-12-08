@@ -36,6 +36,7 @@
                 android:text="@string/nav_header_title"
                 android:textAlignment="center"
                 android:textAllCaps="false"
+                android:textColor="@color/colorPrimary"
                 android:textSize="@dimen/titleSize"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -44,20 +45,24 @@
             android:id="@+id/homeImage"
             android:layout_width="match_parent"
             android:layout_height="278dp"
-            app:srcCompat="@drawable/side_nav_bar" />
+            app:srcCompat="@drawable/mainCookie" />
 
         <TextView
             android:id="@+id/titleDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:contentDescription="a picture of our cookies"
+            android:fontFamily="@font/abhaya_libre_bold"
             android:paddingLeft="@dimen/logoPadding"
             android:paddingTop="@dimen/descriptionPadding"
             android:paddingRight="@dimen/logoPadding"
             android:paddingBottom="@dimen/descriptionPadding"
             android:text="@string/CompanyDesc"
             android:textAlignment="center"
-            android:textSize="@dimen/descriptionSize" />
+            android:textAllCaps="false"
+            android:textColor="@color/design_default_color_on_secondary"
+            android:textSize="@dimen/descriptionSize"
+            android:textStyle="italic" />
 
         <Button
             android:id="@+id/accountButton"
@@ -66,8 +71,10 @@
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/descriptionPadding"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/nav_account"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/menuButton"
@@ -75,8 +82,10 @@
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/bottomPaddingButton"
+            android:backgroundTint="@color/colorPrimary"
             android:text="@string/menu_menu"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
     </LinearLayout>
 </ScrollView>
