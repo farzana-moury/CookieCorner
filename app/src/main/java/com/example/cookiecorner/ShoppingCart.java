@@ -11,7 +11,7 @@ public class ShoppingCart {
 
     //ShoppingCart.menu will contain every cookie carried by the app
     static {
-        menu.add(new CookieMenuItem("cookie1", 1.00, R.drawable.logo, "cookie description goes here"));
+        menu.add(new CookieMenuItem("Strawberry Dream", 1.00, R.drawable.menu_cookie1, "A delicate cookie sandwich made with love. Perfect for Valentine's day!"));
         menu.add(new CookieMenuItem("cookie2", 1.50,  R.drawable.logo, "cookie description goes here"));
         menu.add(new CookieMenuItem("cookie3", 1.00, R.drawable.logo, "cookie description goes here"));
         menu.add(new CookieMenuItem("cookie4", 2.00, R.drawable.logo, "cookie description goes here"));

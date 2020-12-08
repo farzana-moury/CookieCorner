@@ -11,7 +11,7 @@
     <TextView
         android:id="@+id/menuTitle"
         android:layout_width="match_parent"
-        android:layout_height="135dp"
+        android:layout_height="128dp"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center"
         android:text="TextView"
@@ -31,6 +31,8 @@
         android:id="@+id/menuDescription"
         android:layout_width="match_parent"
         android:layout_height="136dp"
+        android:layout_marginLeft="@dimen/bottomPaddingButton"
+        android:layout_marginRight="@dimen/bottomPaddingButton"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center"
         android:text="TextView"
@@ -46,12 +48,13 @@
         android:gravity="center"
         android:text="TextView"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/placeOrderButton"
         android:layout_width="209dp"
-        android:layout_height="wrap_content"
+        android:layout_height="57dp"
         android:layout_gravity="center"
         android:backgroundTint="@color/colorPrimary"
         android:text="Place Order"
