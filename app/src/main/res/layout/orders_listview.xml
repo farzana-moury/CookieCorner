@@ -9,15 +9,22 @@
         android:id="@+id/orderName"
         android:layout_width="227dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/titlePadding"
         android:layout_weight="1"
+        android:fontFamily="@font/abhaya_libre_bold"
         android:text="TextView"
-        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="26sp"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/removeOrderButton"
-        android:layout_width="wrap_content"
+        android:layout_width="122dp"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/titlePadding"
         android:layout_weight="1"
-        android:text="Remove" />
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Remove"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="18sp" />
 </LinearLayout>

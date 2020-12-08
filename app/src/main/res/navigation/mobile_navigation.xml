@@ -98,4 +98,8 @@
         android:id="@+id/nav_settings"
         android:name="com.example.cookiecorner.SettingsFragment"
         android:label="SettingsFragment" />
+    <activity
+        android:id="@+id/activity_settings"
+        android:name="com.example.cookiecorner.SettingsActivity"
+        android:label="SettingsActivity" />
 </navigation>
