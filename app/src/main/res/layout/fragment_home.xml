@@ -45,7 +45,7 @@
             android:id="@+id/homeImage"
             android:layout_width="match_parent"
             android:layout_height="278dp"
-            app:srcCompat="@drawable/mainCookie" />
+            app:srcCompat="@drawable/main_cookie" />
 
         <TextView
             android:id="@+id/titleDescription"

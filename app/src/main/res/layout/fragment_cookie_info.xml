@@ -11,9 +11,15 @@
     <TextView
         android:id="@+id/menuTitle"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="135dp"
+        android:fontFamily="@font/abhaya_libre_bold"
+        android:gravity="center"
         android:text="TextView"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/menuImage"
@@ -24,19 +30,30 @@
     <TextView
         android:id="@+id/menuDescription"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="136dp"
+        android:fontFamily="@font/abhaya_libre_bold"
+        android:gravity="center"
         android:text="TextView"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="18sp"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/menuCost"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_height="61dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/placeOrderButton"
-        android:layout_width="match_parent"
+        android:layout_width="209dp"
         android:layout_height="wrap_content"
-        android:text="Place Order" />
+        android:layout_gravity="center"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="Place Order"
+        android:textColor="@color/cardview_light_background" />
 </LinearLayout>
