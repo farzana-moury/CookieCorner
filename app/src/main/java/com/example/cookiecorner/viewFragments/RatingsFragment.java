@@ -85,16 +85,17 @@ public class RatingsFragment extends Fragment {
         @Override
         public Fragment getItem(int position) {
             switch (position){
-                case 0: return RatingsInfoFragment.newInstance("Farzana Moury", R.drawable.logo,
-                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
-                case 1: return RatingsInfoFragment.newInstance("Luke Skywalker", R.drawable.logo,
-                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
-                case 2: return RatingsInfoFragment.newInstance("Anakin", R.drawable.logo,
-                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
-                case 3: return RatingsInfoFragment.newInstance("Ariel Winter", R.drawable.logo,
-                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
-                case 4: return RatingsInfoFragment.newInstance("Linda Baker", R.drawable.logo,
-                        "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
+                case 0: return RatingsInfoFragment.newInstance("Carl Mews", R.drawable.r1,
+                        "The bakery is fantastic! Cannot be more proud of their cookies - especially the christmas treats!");
+                case 1: return RatingsInfoFragment.newInstance("Marv Penguino", R.drawable.r2,
+                        "At first I thought they couldn't meet my tastebud standards, since I'm from the North Pole. But it turns out they gave " +
+                                "me EXACTLY what I wanted...Salmon Cookies!");
+                case 2: return RatingsInfoFragment.newInstance("Scaredy Squirrel", R.drawable.r3,
+                        "I'm not fond of anything except nutty goods. Luckily I was able to get myself an exquisite box of peanut butter cookies.");
+                case 3: return RatingsInfoFragment.newInstance("Megan Fox", R.drawable.r4,
+                        "Being part of the showbiz has its perks. Once in a while I come here for a bite, it helps to calm down.");
+                case 4: return RatingsInfoFragment.newInstance("Ali Baker", R.drawable.r5,
+                        "I own a bakery myself. The staff are generous and sweet. They even give me a hand when the holiday begins. Nothing better than to know we help each other grow. Recommend 100%");
                 default: return RatingsInfoFragment.newInstance("No name", R.drawable.logo,
                         "Customer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\nCustomer Review Goes here\n");
             }
