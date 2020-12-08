@@ -1,12 +1,18 @@
 <resources>
-    <!-- Reply Preference -->
-    <string-array name="color_entries">
-        <item>Reply</item>
-        <item>Reply to all</item>
+    <!-- Cookie Preference -->
+    <string-array name="cookie_toppings">
+        <item>Sprinkles</item>
+        <item>Chocolate Chip</item>
+        <item>Peanuts</item>
+        <item>Oats</item>
+        <item>Raisins</item>
     </string-array>
 
-    <string-array name="reply_values">
-        <item>reply</item>
-        <item>reply_all</item>
+    <string-array name="toppings_values">
+        <item>sprinkle</item>
+        <item>choc_chip</item>
+        <item>peanut</item>
+        <item>oat</item>
+        <item>raisin</item>
     </string-array>
 </resources>
