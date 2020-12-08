@@ -46,6 +46,7 @@
             android:padding="@dimen/descriptionPadding"
             android:text="TextView"
             android:textAlignment="viewStart"
+            android:textColor="@color/design_default_color_on_secondary"
             android:textSize="18sp"
             android:textStyle="bold|italic" />
     </LinearLayout>
