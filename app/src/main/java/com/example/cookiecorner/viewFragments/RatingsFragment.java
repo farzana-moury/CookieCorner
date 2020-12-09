@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.infoFragments.RatingsInfoFragment;
 
+import static com.example.cookiecorner.MainActivity.fab;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RatingsFragment#newInstance} factory method to
@@ -65,6 +67,8 @@ public class RatingsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ratings, container, false);
 

@@ -22,6 +22,8 @@ import com.example.cookiecorner.pojo.RecipeItem;
 
 import java.util.ArrayList;
 
+import static com.example.cookiecorner.MainActivity.fab;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RecipesFragment#newInstance} factory method to
@@ -78,6 +80,8 @@ public class RecipesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recipes, container, false);
 

@@ -17,6 +17,8 @@ import com.example.cookiecorner.pojo.GalleryItem;
 
 import java.util.ArrayList;
 
+import static com.example.cookiecorner.MainActivity.fab;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link GalleryFragment#newInstance} factory method to
@@ -67,6 +69,8 @@ public class GalleryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_gallery, container, false);
 

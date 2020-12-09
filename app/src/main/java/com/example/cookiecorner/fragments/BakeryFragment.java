@@ -12,12 +12,16 @@ import android.widget.Button;
 
 import com.example.cookiecorner.R;
 
+import static com.example.cookiecorner.MainActivity.fab;
+
 
 public class BakeryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_bakery, container, false);
 

@@ -15,6 +15,8 @@ import com.example.cookiecorner.pojo.FAQItem;
 
 import java.util.ArrayList;
 
+import static com.example.cookiecorner.MainActivity.fab;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FAQFragment#newInstance} factory method to
@@ -65,6 +67,8 @@ public class FAQFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_f_a_q, container, false);
 

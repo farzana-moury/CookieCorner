@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.cookiecorner.R;
 
+import static com.example.cookiecorner.MainActivity.fab;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RecipeInfoFragment#newInstance} factory method to
@@ -74,6 +76,8 @@ public class RecipeInfoFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recipe_info, container, false);
 
