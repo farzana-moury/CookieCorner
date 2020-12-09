@@ -25,13 +25,14 @@ public class ShoppingCart {
     private ShoppingCart(){
         shoppingList = new ArrayList<>();
     }
+
     public static ShoppingCart getInstance() {
         if(shoppingCart == null){
             shoppingCart = new ShoppingCart();
         }
         return shoppingCart;
     }
-    public ArrayList<CookieMenuItem> getShoppingList() {
+    public static ArrayList<CookieMenuItem> getShoppingList() {
         return shoppingList;
     }
 

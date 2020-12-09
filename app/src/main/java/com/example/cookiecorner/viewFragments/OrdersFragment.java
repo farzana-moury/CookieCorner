@@ -34,6 +34,8 @@ public class OrdersFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     CustomListViewAdapter adapter;
+    public ArrayList<CookieMenuItem> orders;
+    public ListView listView;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -76,18 +78,21 @@ public class OrdersFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_orders, container, false);
 
-        final ListView listView = view.findViewById(R.id.ordersList);
+        listView = view.findViewById(R.id.ordersList);
 
         MainActivity.fab.show();
 
-        ArrayList<CookieMenuItem> orders = ShoppingCart.getInstance().getShoppingList();
+        orders = ShoppingCart.getInstance().getShoppingList();
 
         adapter = new OrdersFragment.CustomListViewAdapter(getContext(), orders);
 
-
         adapter.notifyDataSetChanged(); //letting the adapter know we removed an item (refreshes the view)
 
-        listView.setAdapter(adapter);
+        listView.setAdapter(adapter); //setting the adapter to the listview
+
+        for (CookieMenuItem o : orders){
+            System.out.println(o.getName());
+        }
 
         return view;
     }
@@ -96,7 +101,7 @@ public class OrdersFragment extends Fragment {
 
         //CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
         public CustomListViewAdapter(@NonNull Context context, ArrayList<CookieMenuItem> items) {
-            super(context, 0, items);
+            super(context, 0, orders);
         }
 
         @NonNull
@@ -113,10 +118,14 @@ public class OrdersFragment extends Fragment {
                 removeOrder.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        System.out.println("hello");
-                        System.out.println(MenuFragment.cookiePosition);
-                        int index = ShoppingCart.getInstance().getShoppingList().indexOf(getItem(position));
-                        ShoppingCart.getInstance().getShoppingList().remove(index);
+                        //int index = orders.indexOf(orders.get(position));
+                        //System.out.println(getItem(position).getName());
+                        orders.remove(orders.get(position));
+                        //System.out.println(index);
+
+                        adapter.notifyDataSetChanged(); //letting the adapter know we removed an item (refreshes the view)
+
+                        listView.setAdapter(adapter); //resetting the adapter to the listview
                     }
                 });
 
