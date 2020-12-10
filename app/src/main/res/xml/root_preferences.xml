@@ -1,6 +1,48 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <PreferenceCategory app:title="Account">
+
+        <EditTextPreference
+            app:key="name"
+            app:title="@string/account_name"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="location"
+            app:title="@string/account_location"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="cardNumber"
+            app:title="@string/account_card"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="accHolder"
+            app:title="@string/account_holder"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="expDate"
+            app:title="@string/account_date"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="cvc"
+            app:title="@string/account_cvc"
+            app:useSimpleSummaryProvider="true" />
+
+        <!--        <ListPreference-->
+        <!--            app:defaultValue="reply"-->
+        <!--            app:entries="@array/color_entries"-->
+        <!--            app:entryValues="@array/reply_values"-->
+        <!--            app:key="reply"-->
+        <!--            app:title="@string/color_title"-->
+        <!--            app:useSimpleSummaryProvider="true" />-->
+
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="Cookie Flavour">
 
         <EditTextPreference

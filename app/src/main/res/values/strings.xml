@@ -59,6 +59,15 @@
 
     <!-- Account Preferences -->
     <string name="account_name">Your Name</string>
+    <string name="account_location">Delivery Location</string>
+    <string name="account_card">Card Number</string>
+    <string name="account_holder">Account Holder</string>
+    <string name="account_date">Expiry Date</string>
+    <string name="account_cvc">CVC</string>
+
+
+
+
     <string name="color_title">Default reply action</string>
 
     <!-- Sync Preferences -->

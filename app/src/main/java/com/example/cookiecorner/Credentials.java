@@ -10,11 +10,6 @@ public class Credentials {
 
     public static Credentials credentials;
 
-    private Credentials(){
-        ACC_NAME = "";
-        ACC_LOCATION = "";
-    }
-
     public static Credentials getInstance(){
         if(credentials == null){
             credentials = new Credentials();
