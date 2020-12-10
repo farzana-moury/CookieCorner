@@ -124,11 +124,11 @@ public class AccountFragment extends Fragment {
         super.onResume();
 
         name.setText(preferences.getString("name", ""));
-        location.setText(credentials.getAccLocation());
-        cardNumber.setText(credentials.getAccCard());
-        cardHolder.setText(credentials.getAccHolder());
-        expiryDate.setText(credentials.getExpDate());
-        cvc.setText(credentials.getAccCvc());
+        location.setText(preferences.getString("location", ""));
+        cardNumber.setText(preferences.getString("cardNumber", ""));
+        cardHolder.setText(preferences.getString("accHolder", ""));
+        expiryDate.setText((preferences.getString("expDate", ""));
+        cvc.setText(preferences.getString("cvc", ""));
 
         Log.d("watchMe", "accountOnResume");
     }
