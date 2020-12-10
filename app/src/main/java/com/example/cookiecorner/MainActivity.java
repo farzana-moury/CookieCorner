@@ -1,6 +1,7 @@
 package com.example.cookiecorner;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
@@ -20,11 +21,13 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public static FloatingActionButton fab;
+    public static SharedPreferences preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -68,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
                 //Launch the settings activity
                 Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
                 MainActivity.this.startActivity(intent);
-                return true;
             }
         }
         return super.onOptionsItemSelected(item);

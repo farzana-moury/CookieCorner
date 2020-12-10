@@ -22,8 +22,6 @@ import com.example.cookiecorner.pojo.CookieMenuItem;
 
 import java.util.ArrayList;
 
-import static com.example.cookiecorner.MainActivity.fab;
-
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link OrdersFragment#newInstance} factory method to
@@ -121,10 +119,9 @@ public class OrdersFragment extends Fragment {
                 removeOrder.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //int index = orders.indexOf(orders.get(position));
-                        //System.out.println(getItem(position).getName());
+
+                        //removing an order
                         orders.remove(orders.get(position));
-                        //System.out.println(index);
 
                         adapter.notifyDataSetChanged(); //letting the adapter know we removed an item (refreshes the view)
 

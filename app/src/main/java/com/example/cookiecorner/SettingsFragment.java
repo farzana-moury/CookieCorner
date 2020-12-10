@@ -16,8 +16,5 @@ public class SettingsFragment extends PreferenceFragmentCompat {
 
         namePreference = findPreference("name"); //referencing a given preference
 
-
-
-
     }
 }

@@ -16,6 +16,7 @@ import com.example.cookiecorner.R;
 
 import static com.example.cookiecorner.Credentials.credentials;
 import static com.example.cookiecorner.MainActivity.fab;
+import static com.example.cookiecorner.MainActivity.preferences;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -122,7 +123,7 @@ public class AccountFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
-        name.setText(credentials.getAccName());
+        name.setText(preferences.getString("name", ""));
         location.setText(credentials.getAccLocation());
         cardNumber.setText(credentials.getAccCard());
         cardHolder.setText(credentials.getAccHolder());
