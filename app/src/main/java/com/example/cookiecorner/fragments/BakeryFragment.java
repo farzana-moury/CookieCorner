@@ -10,7 +10,14 @@ import android.widget.Button;
 import com.example.cookiecorner.R;
 import static com.example.cookiecorner.MainActivity.fab;
 
-
+/**
+ * The Bakery Fragment
+ * - holds the buttons that will take you to three other pages
+ *
+ * @author Farzana Moury
+ * @version 1.0
+ * @since Nov 8th 2020
+ */
 public class BakeryFragment extends Fragment {
 
     /**
