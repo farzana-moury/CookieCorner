@@ -127,7 +127,7 @@ public class AccountFragment extends Fragment {
         location.setText(preferences.getString("location", ""));
         cardNumber.setText(preferences.getString("cardNumber", ""));
         cardHolder.setText(preferences.getString("accHolder", ""));
-        expiryDate.setText((preferences.getString("expDate", ""));
+        expiryDate.setText(preferences.getString("expDate", ""));
         cvc.setText(preferences.getString("cvc", ""));
 
         Log.d("watchMe", "accountOnResume");
