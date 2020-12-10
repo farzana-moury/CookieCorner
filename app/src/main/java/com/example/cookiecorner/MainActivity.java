@@ -15,8 +15,10 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -37,11 +39,19 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         fab = findViewById(R.id.fab);
+
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //takes you to the customize fragment;
-                Navigation.findNavController(view).navigate(R.id.action_nav_orders_to_nav_customize);
+
+                // look for the nav host fragment
+                NavHostFragment navHost = (NavHostFragment)getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
+
+                // grab its nav controller
+                NavController controller = navHost.getNavController();
+
+                // use the controller to navigate to the customize fragment
+                controller.navigate(R.id.action_nav_orders_to_nav_customize);
             }
         });
         preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());

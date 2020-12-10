@@ -21,26 +21,19 @@ import static com.example.cookiecorner.MainActivity.fab;
  * A simple {@link Fragment} subclass.
  * Use the {@link CookieInfoFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * @author Farzana Moury
+ * @version 1.0
+ * @since Nov 27th 2020
  */
 public class CookieInfoFragment extends Fragment {
 
+    // variables to hold the bundled data taken from the Menu Fragment
     String title = "no_value";
     int image = R.drawable.logo;
     String desc = "no_value";
     double price = 0.00;
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public CookieInfoFragment() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -50,24 +43,22 @@ public class CookieInfoFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment CookieInfoFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static CookieInfoFragment newInstance(String param1, String param2) {
         CookieInfoFragment fragment = new CookieInfoFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
+    /**
+     * This method is called when the Fragment is first created. Here we put initialization code.
+     *
+     * @param savedInstanceState
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // taking the values from the bundle
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-
             title = getArguments().getString("TITLE");
             image = getArguments().getInt("IMAGE");
             price = getArguments().getDouble("PRICE");
@@ -75,6 +66,14 @@ public class CookieInfoFragment extends Fragment {
         }
     }
 
+    /**
+     * This method is used to draw the Fragment UI -- the things to be viewed on screen
+     *
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return the view that holds all the viewable objects
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -83,6 +82,7 @@ public class CookieInfoFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_cookie_info, container, false);
 
+        // setting the view elements to the values taken from the bundle
         TextView menuTitle = view.findViewById(R.id.menuTitle);
         menuTitle.setText(title);
 
@@ -95,6 +95,7 @@ public class CookieInfoFragment extends Fragment {
         TextView menuPrice = view.findViewById(R.id.menuCost);
         menuPrice.setText("$ " + price);
 
+        // when you click on the Place Order button
         Button placeOrder = view.findViewById(R.id.placeOrderButton);
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override

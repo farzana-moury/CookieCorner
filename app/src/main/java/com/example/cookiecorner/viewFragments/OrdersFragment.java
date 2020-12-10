@@ -88,14 +88,6 @@ public class OrdersFragment extends Fragment {
 
         fab.show();
 
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //takes you to the customize fragment;
-//                Navigation.findNavController(view).navigate(R.id.action_nav_orders_to_nav_customize);
-//            }
-//        });
-
         orders = ShoppingCart.getInstance().getShoppingList();
 
         adapter = new OrdersFragment.CustomListViewAdapter(getContext(), orders);
