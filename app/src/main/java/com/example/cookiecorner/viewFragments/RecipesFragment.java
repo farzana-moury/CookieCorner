@@ -89,20 +89,33 @@ public class RecipesFragment extends Fragment {
 
         final ArrayList<RecipeItem> recipes = new ArrayList<>();
 
-        recipes.add(new RecipeItem("recipe1", R.drawable.logo,
-                "1h 00m", "100 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+        recipes.add(new RecipeItem("Flaky Puff Pastry", R.drawable.recipe1,
+                "3h 40m", "418 cal",
+                "Ingredients\n\n• Flour\n• Salt\n• Butter \n• Water\n• Sugar" +
+                "\n\n\nInstructions\n\n1. Combine flour and salt in a big bowl with a whisk until even mixture is obtained" +
+                        "\n\n2. Get your cold butter and slice into thin pieces before tossing into mixture. Each slice shouldn't be thicker than 1/4 inch." +
+                        "\n\n3. Pour cold water into mixture and stir everything together until the dough forms a ball. Don't worry about the butter chunks." +
+                        "\n\n4. Flatten the dough into a disk shape, before popping it into the freezer for 1 hour." +
+                        "\n\n5. Once it's cool, dust your work surface and roll the dough into a flat rectangle." +
+                        "\n\n6. Fold the rectangle into thirds, like you do a letter. Repeat this process as many times to get as many layers." +
+                        "\n\n7. Put the puff pastry back in the freezer for 20-30 min." +
+                        "\n\n8. Preheat the oven to 230˚  C." +
+                        "\n\n9. Once it's cool, take out the pastry and roll it into a thickness of about 1/8 inch." +
+                        "\n\n10. Fold your pastry into whatever shape you want into a baking tray. MAKE SURE your pastry dough is cold" +
+                        "\n\n11. Put the tray into the oven for about 10 minutes. The layers should rise and dough turn golden and crispy. " +
+                        "\n\n12. Enjoy!"));
 
-        recipes.add(new RecipeItem("recipe2", R.drawable.logo,
-                "2h 00m", "350 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
-
-        recipes.add(new RecipeItem("recipe3", R.drawable.logo,
-                "1h 20m", "150 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
-
-        recipes.add(new RecipeItem("recipe4", R.drawable.logo,
-                "2h 15m", "100 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
-
-        recipes.add(new RecipeItem("recipe5", R.drawable.logo,
-                "1h 30m", "200 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+//        recipes.add(new RecipeItem("recipe2", R.drawable.logo,
+//                "2h 00m", "350 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+//
+//        recipes.add(new RecipeItem("recipe3", R.drawable.logo,
+//                "1h 20m", "150 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+//
+//        recipes.add(new RecipeItem("recipe4", R.drawable.logo,
+//                "2h 15m", "100 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
+//
+//        recipes.add(new RecipeItem("recipe5", R.drawable.logo,
+//                "1h 30m", "200 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
 
 
         listView.setAdapter(new CustomListViewAdapter(getContext(), recipes));

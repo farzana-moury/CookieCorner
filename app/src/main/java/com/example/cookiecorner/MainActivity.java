@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 
+import com.example.cookiecorner.viewFragments.MenuFragment;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -39,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //takes you to the customize fragment;
+                Navigation.findNavController(view).navigate(R.id.action_nav_orders_to_nav_customize);
             }
         });
         preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_menu, R.id.nav_bakery, R.id.nav_recipes, R.id.nav_account, R.id.nav_orders, R.id.nav_contact, R.id.activity_settings)
+                R.id.nav_home, R.id.nav_menu, R.id.nav_bakery, R.id.nav_recipes, R.id.nav_account, R.id.nav_orders, R.id.nav_contact, R.id.nav_customize, R.id.activity_settings, R.id.fab)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);

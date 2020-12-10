@@ -88,10 +88,10 @@ public class RecipeInfoFragment extends Fragment {
         recipeImage.setImageResource(image);
 
         TextView durationTime = view.findViewById(R.id.recipeDuration);
-        durationTime.setText("Duration (prep + bake time): " + duration);
+        durationTime.setText("Duration (prep + bake): " + duration);
 
         TextView caloriesVal = view.findViewById(R.id.recipeCalories);
-        caloriesVal.setText("Calories (per cookie): " + calories);
+        caloriesVal.setText("Calories (per serving): " + calories);
 
         TextView recipeInstruct = view.findViewById(R.id.recipeDesc);
         recipeInstruct.setText(instructions);

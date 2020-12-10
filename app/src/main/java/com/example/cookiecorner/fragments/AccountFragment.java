@@ -87,35 +87,6 @@ public class AccountFragment extends Fragment {
         expiryDate = view.findViewById(R.id.expDateEditText);
         cvc = view.findViewById(R.id.cvcEditText);
 
-
-        Button saveButton = view.findViewById(R.id.saveButton);
-
-        saveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //setting the account name
-                credentials.setAccName(name.getText().toString());
-
-
-                //setting the delivery location
-                credentials.setAccLocation(location.getText().toString());
-
-
-                //setting the payment information
-                credentials.setAccCard(cardNumber.getText().toString());
-
-
-                credentials.setAccHolder(cardHolder.getText().toString());
-
-
-                credentials.setExpDate(expiryDate.getText().toString());
-
-
-                credentials.setAccCvc(cvc.getText().toString());
-
-            }
-        });
-
         return view;
     }
 
@@ -123,6 +94,7 @@ public class AccountFragment extends Fragment {
     public void onResume() {
         super.onResume();
 
+        //Setting the EditTexts to whatever is in Account Settings
         name.setText(preferences.getString("name", ""));
         location.setText(preferences.getString("location", ""));
         cardNumber.setText(preferences.getString("cardNumber", ""));

@@ -1,11 +1,13 @@
 package com.example.cookiecorner.viewFragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +19,13 @@ import android.widget.TextView;
 
 import com.example.cookiecorner.MainActivity;
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.SettingsActivity;
 import com.example.cookiecorner.ShoppingCart;
 import com.example.cookiecorner.pojo.CookieMenuItem;
 
 import java.util.ArrayList;
+
+import static com.example.cookiecorner.MainActivity.fab;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -81,7 +86,15 @@ public class OrdersFragment extends Fragment {
 
         listView = view.findViewById(R.id.ordersList);
 
-        MainActivity.fab.show();
+        fab.show();
+
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //takes you to the customize fragment;
+//                Navigation.findNavController(view).navigate(R.id.action_nav_orders_to_nav_customize);
+//            }
+//        });
 
         orders = ShoppingCart.getInstance().getShoppingList();
 

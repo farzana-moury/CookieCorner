@@ -58,7 +58,11 @@
         android:id="@+id/nav_orders"
         android:name="com.example.cookiecorner.viewFragments.OrdersFragment"
         android:label="@string/nav_orders"
-        tools:layout="@layout/fragment_orders" />
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_nav_orders_to_nav_customize"
+            app:destination="@id/nav_customize" />
+    </fragment>
     <fragment
         android:id="@+id/nav_contact"
         android:name="com.example.cookiecorner.fragments.ContactFragment"
@@ -102,4 +106,9 @@
         android:id="@+id/activity_settings"
         android:name="com.example.cookiecorner.SettingsActivity"
         android:label="SettingsActivity" />
+    <fragment
+        android:id="@+id/nav_customize"
+        android:name="com.example.cookiecorner.CustomizeFragment"
+        android:label="@string/nav_customize"
+        tools:layout="@layout/fragment_customize" />
 </navigation>

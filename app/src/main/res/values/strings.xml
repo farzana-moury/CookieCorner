@@ -28,6 +28,7 @@
     <string name="nav_account">My Account</string>
     <string name="nav_orders">Orders</string>
     <string name="nav_contact">CONTACT US</string>
+    <string name="nav_customize">CUSTOMIZE COOKIE</string>
 
     <!--  GALLERY, RATINGS AND FAQ FRAGMENT STRINGS  -->
     <!--  TOP HEADINGS  -->
@@ -66,8 +67,6 @@
     <string name="account_cvc">CVC</string>
 
 
-
-
     <string name="color_title">Default reply action</string>
 
     <!-- Sync Preferences -->
@@ -78,4 +77,8 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_settings">Settings</string>
 
+    <!--  WEBSITE SOURCES  -->
+    <!--  RECIPE WEBSITES  -->
+<!--    http://pakirecipe.blogspot.com/2012/08/bakar-khani-by-chef-shireen-anwer.html-->
+<!--    https://bakingamoment.com/easy-homemade-puff-pastry-recipe/-->
 </resources>
