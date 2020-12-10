@@ -16,6 +16,10 @@ import static com.example.cookiecorner.MainActivity.fab;
  * A simple {@link Fragment} subclass.
  * Use the {@link ContactFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * @author Farzana Moury
+ * @version 1.0
+ * @since Nov 8th 2020
  */
 public class ContactFragment extends Fragment {
 
