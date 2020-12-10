@@ -18,6 +18,8 @@ import static com.example.cookiecorner.MainActivity.fab;
  * A simple {@link Fragment} subclass.
  * Use the {@link RecipeInfoFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ *
  */
 public class RecipeInfoFragment extends Fragment {
 

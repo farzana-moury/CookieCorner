@@ -1,20 +1,16 @@
 package com.example.cookiecorner.infoFragments;
 
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.ShoppingCart;
 import com.example.cookiecorner.viewFragments.MenuFragment;
-
 import static com.example.cookiecorner.MainActivity.fab;
 
 /**
