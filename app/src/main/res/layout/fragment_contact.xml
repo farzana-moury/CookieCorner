@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/contact_image"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".fragments.ContactFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    tools:context=".fragments.ContactFragment">
 
     <LinearLayout
         android:id="@+id/scrollView"
@@ -21,55 +21,69 @@
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginTop="@dimen/bottomPaddingButton"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/email"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/phoneButton"
             android:layout_width="@dimen/homeButtonsWidth"
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/phone"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/textButton"
             android:layout_width="@dimen/homeButtonsWidth"
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/text"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/locationButton"
             android:layout_width="@dimen/homeButtonsWidth"
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/location"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/websiteButton"
             android:layout_width="@dimen/homeButtonsWidth"
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/website"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/igButton"
             android:layout_width="@dimen/homeButtonsWidth"
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginBottom="@dimen/descriptionPadding"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/instagram"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
 
         <Button
             android:id="@+id/twtButton"
             android:layout_width="@dimen/homeButtonsWidth"
             android:layout_height="@dimen/homeButtonsHeight"
             android:layout_marginBottom="@dimen/bottomPaddingButton"
+            android:background="@drawable/side_nav_bar"
             android:text="@string/twitter"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            android:textColor="@color/cardview_light_background" />
     </LinearLayout>
 </ScrollView>
