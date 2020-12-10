@@ -23,7 +23,6 @@ public class BakeryFragment extends Fragment {
     /**
      * This method is used to draw the Fragment UI -- the things to be viewed on screen
      *
-     *
      * @param inflater
      * @param container
      * @param savedInstanceState
