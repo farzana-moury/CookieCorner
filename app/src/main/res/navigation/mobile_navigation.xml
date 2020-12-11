@@ -100,15 +100,15 @@
         tools:layout="@layout/fragment_ratings_info" />
     <fragment
         android:id="@+id/nav_settings"
-        android:name="com.example.cookiecorner.SettingsFragment"
+        android:name="com.example.cookiecorner.settings.SettingsFragment"
         android:label="SettingsFragment" />
     <activity
         android:id="@+id/activity_settings"
-        android:name="com.example.cookiecorner.SettingsActivity"
+        android:name="com.example.cookiecorner.settings.SettingsActivity"
         android:label="SettingsActivity" />
     <fragment
         android:id="@+id/nav_customize"
-        android:name="com.example.cookiecorner.CustomizeFragment"
+        android:name="com.example.cookiecorner.fragments.CustomizeFragment"
         android:label="@string/nav_customize"
         tools:layout="@layout/fragment_customize" />
 </navigation>

@@ -1,7 +1,9 @@
-package com.example.cookiecorner;
+package com.example.cookiecorner.settings;
 import android.os.Bundle;
 import androidx.preference.EditTextPreference;
 import androidx.preference.PreferenceFragmentCompat;
+
+import com.example.cookiecorner.R;
 
 /**
  * The Settings Fragment

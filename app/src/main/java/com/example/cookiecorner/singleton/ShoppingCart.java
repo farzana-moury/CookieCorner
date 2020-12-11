@@ -1,4 +1,5 @@
-package com.example.cookiecorner;
+package com.example.cookiecorner.singleton;
+import com.example.cookiecorner.R;
 import com.example.cookiecorner.pojo.CookieMenuItem;
 import java.util.ArrayList;
 

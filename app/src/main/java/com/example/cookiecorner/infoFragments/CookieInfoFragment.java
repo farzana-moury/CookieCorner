@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.cookiecorner.R;
-import com.example.cookiecorner.ShoppingCart;
+import com.example.cookiecorner.singleton.ShoppingCart;
 import com.example.cookiecorner.viewFragments.MenuFragment;
 import static com.example.cookiecorner.MainActivity.fab;
 

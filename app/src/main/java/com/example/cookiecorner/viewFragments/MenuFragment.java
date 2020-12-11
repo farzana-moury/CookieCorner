@@ -13,7 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import com.example.cookiecorner.R;
-import com.example.cookiecorner.ShoppingCart;
+import com.example.cookiecorner.singleton.ShoppingCart;
 import com.example.cookiecorner.pojo.CookieMenuItem;
 import java.util.ArrayList;
 import static com.example.cookiecorner.MainActivity.fab;

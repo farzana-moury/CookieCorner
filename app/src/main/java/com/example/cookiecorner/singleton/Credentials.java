@@ -1,4 +1,4 @@
-package com.example.cookiecorner;
+package com.example.cookiecorner.singleton;
 
 /**
  * Represents a Singleton class that contains credentials for Account Fragment
