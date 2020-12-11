@@ -1,5 +1,6 @@
 package com.example.cookiecorner;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,6 +18,7 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.preference.PreferenceManager;
 
 /**
  * The Main class to contain the configuration for navigating between all fragments
@@ -30,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     // properties
     private AppBarConfiguration mAppBarConfiguration;
     public static FloatingActionButton fab;
+    public static SharedPreferences preferences;
 
     /**
      * This method is called when the Fragment is first created. Here we put initialization code.
@@ -60,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
                 controller.navigate(R.id.action_nav_orders_to_nav_customize);
             }
         });
+
+        // accessing the shared preferences to transfer data to and from settings
+        preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
