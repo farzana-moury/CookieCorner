@@ -1,0 +1,18 @@
+<resources>
+    <!-- Cookie Preference -->
+    <string-array name="cookie_toppings">
+        <item>Sprinkles</item>
+        <item>Chocolate Chip</item>
+        <item>Peanuts</item>
+        <item>Oats</item>
+        <item>Raisins</item>
+    </string-array>
+
+    <string-array name="toppings_values">
+        <item>Sprinkles</item>
+        <item>Chocolate Chip</item>
+        <item>Peanuts</item>
+        <item>Oats</item>
+        <item>Raisins</item>
+    </string-array>
+</resources>

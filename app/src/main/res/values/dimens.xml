@@ -5,4 +5,68 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+
+    <!--  Text Sizes  -->
+    <dimen name="titleSize">40sp</dimen>
+    <dimen name="descriptionSize">20sp</dimen>
+    <dimen name="descriptionMenu">26sp</dimen>
+    <dimen name="questionSize">28sp</dimen>
+    <dimen name="accountHeader">24sp</dimen>
+    <dimen name="paymentInfoSize">18sp</dimen>
+    <dimen name="header_size">16sp</dimen>
+    <dimen name="link_size">14sp</dimen>
+    <dimen name="recipe_title">118dp</dimen>
+    <dimen name="menu_height">75dp</dimen>
+    <dimen name="menu_price">22sp</dimen>
+
+    <!--  Cookie Info Fragment Sizes  -->
+    <dimen name="imageHeight">178dp</dimen>
+    <dimen name="textHeight">136dp</dimen>
+    <dimen name="titleFont">30sp</dimen>
+    <dimen name="title_height">128dp</dimen>
+    <dimen name="desc_height">61dp</dimen>
+    <dimen name="button_width">209dp</dimen>
+    <dimen name="button_height">57dp</dimen>
+
+    <!--  Ratings Fragment Sizes  -->
+    <dimen name="name_height">60dp</dimen>
+
+    <!--  Recipes ListView Sizes  -->
+    <dimen name="layout_height1">132dp</dimen>
+    <dimen name="layout_height2">76dp</dimen>
+    <dimen name="text_height">56dp</dimen>
+
+    <!--  Image Sizes  -->
+    <dimen name="home_image">278dp</dimen>
+    <dimen name="ratings_image">197dp</dimen>
+    <dimen name="star_width">50dp</dimen>
+    <dimen name="recipe_image">238dp</dimen>
+    <dimen name="gallery_image">191dp</dimen>
+    <dimen name="logo_width">78dp</dimen>
+    <dimen name="logo_height">85dp</dimen>
+    <dimen name="order_name">227dp</dimen>
+    <dimen name="recipeImg_width">244dp</dimen>
+    <dimen name="recipeImg_height">132dp</dimen>
+
+    <!--  Layout Sizes  -->
+    <dimen name="titleLayout">80dp</dimen>
+    <dimen name="titleHeight">134dp</dimen>
+
+    <!--  Margin Sizes  -->
+    <dimen name="accMargin">30dp</dimen>
+
+    <!--  Padding Sizes  -->
+    <dimen name="logoPadding">10dp</dimen>
+    <dimen name="titlePadding">15dp</dimen>
+    <dimen name="descriptionPadding">20dp</dimen>
+    <dimen name="bottomPaddingButton">40dp</dimen>
+
+    <!--  EMS Sizes  -->
+    <dimen name="ems">10</dimen>
+
+    <!--  Button Sizes  -->
+    <dimen name="homeButtonsWidth">300dp</dimen>
+    <dimen name="homeButtonsHeight">70dp</dimen>
+    <dimen name="custom_order">160dp</dimen>
+    <dimen name="remove_order">122dp</dimen>
 </resources>

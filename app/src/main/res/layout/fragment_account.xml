@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AccountFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/descriptionPadding">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/side_nav_bar"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/account_name"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="@dimen/accountHeader"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/accMargin"
+            android:background="@color/colorPrimaryDark"
+            android:inputType="textPersonName"
+            android:padding="@dimen/fab_margin"
+            android:textColor="@color/cardview_light_background" />
+
+        <TextView
+            android:id="@+id/locationLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/side_nav_bar"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/account_location"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="@dimen/accountHeader"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/addressEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/accMargin"
+            android:background="@color/colorPrimaryDark"
+            android:inputType="textPostalAddress"
+            android:padding="@dimen/fab_margin"
+            android:textColor="@color/cardview_light_background" />
+
+        <TextView
+            android:id="@+id/paymentLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/titlePadding"
+            android:background="@drawable/side_nav_bar"
+            android:padding="@dimen/fab_margin"
+            android:text="@string/account_payment"
+            android:textColor="@android:color/holo_orange_light"
+            android:textSize="@dimen/accountHeader"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cardNumLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/fab_margin"
+                android:text="@string/account_card"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/paymentInfoSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cardEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/descriptionPadding"
+                android:inputType="numberSigned"
+                android:padding="@dimen/fab_margin"
+                android:textColor="@color/cardview_light_background" />
+
+            <TextView
+                android:id="@+id/accountHolderLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/fab_margin"
+                android:text="@string/account_holder"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/paymentInfoSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/accNameEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/descriptionPadding"
+                android:inputType="textPersonName"
+                android:padding="@dimen/fab_margin"
+                android:textColor="@color/cardview_light_background" />
+
+            <TextView
+                android:id="@+id/dateLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/fab_margin"
+                android:text="@string/account_date"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/paymentInfoSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/expDateEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/descriptionPadding"
+                android:inputType="date"
+                android:padding="@dimen/fab_margin"
+                android:textColor="@color/cardview_light_background" />
+
+            <TextView
+                android:id="@+id/cvcLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/fab_margin"
+                android:text="@string/account_cvc"
+                android:textColor="@android:color/holo_orange_light"
+                android:textSize="@dimen/paymentInfoSize"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/cvcEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/descriptionPadding"
+                android:inputType="numberSigned"
+                android:padding="@dimen/fab_margin"
+                android:textColor="@color/cardview_light_background" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

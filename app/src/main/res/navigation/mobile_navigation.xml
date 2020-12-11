@@ -3,23 +3,117 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
+    app:startDestination="@id/nav_home">
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.cookiecorner.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:name="com.example.cookiecorner.fragments.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_account"
+            app:destination="@id/nav_account" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_menu"
+            app:destination="@id/nav_menu" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.example.cookiecorner.viewFragments.MenuFragment"
+        android:label="@string/nav_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_nav_menu_to_cookieInfoFragment"
+            app:destination="@id/cookieInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_bakery"
+        android:name="com.example.cookiecorner.fragments.BakeryFragment"
+        android:label="@string/nav_bakery"
+        tools:layout="@layout/fragment_bakery" >
+        <action
+            android:id="@+id/action_nav_bakery_to_galleryFragment"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_nav_bakery_to_FAQFragment"
+            app:destination="@id/nav_faq" />
+        <action
+            android:id="@+id/action_nav_bakery_to_ratingsFragment"
+            app:destination="@id/nav_ratings" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_recipes"
+        android:name="com.example.cookiecorner.viewFragments.RecipesFragment"
+        android:label="@string/nav_recipes"
+        tools:layout="@layout/fragment_recipes" >
+        <action
+            android:id="@+id/action_nav_recipes_to_recipeInfoFragment"
+            app:destination="@id/recipeInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.example.cookiecorner.fragments.AccountFragment"
+        android:label="@string/nav_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="com.example.cookiecorner.viewFragments.OrdersFragment"
+        android:label="@string/nav_orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_nav_orders_to_nav_customize"
+            app:destination="@id/nav_customize" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.example.cookiecorner.fragments.ContactFragment"
+        android:label="@string/nav_contact"
+        tools:layout="@layout/fragment_contact" />
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.example.cookiecorner.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:name="com.example.cookiecorner.viewFragments.GalleryFragment"
+        android:label="@string/nav_gallery"
         tools:layout="@layout/fragment_gallery" />
-
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.cookiecorner.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_ratings"
+        android:name="com.example.cookiecorner.viewFragments.RatingsFragment"
+        android:label="@string/nav_ratings"
+        tools:layout="@layout/fragment_ratings" />
+    <fragment
+        android:id="@+id/nav_faq"
+        android:name="com.example.cookiecorner.viewFragments.FAQFragment"
+        android:label="@string/nav_faq"
+        tools:layout="@layout/fragment_f_a_q" />
+    <fragment
+        android:id="@+id/cookieInfoFragment"
+        android:name="com.example.cookiecorner.infoFragments.CookieInfoFragment"
+        android:label="OUR MENU"
+        tools:layout="@layout/fragment_cookie_info" />
+    <fragment
+        android:id="@+id/recipeInfoFragment"
+        android:name="com.example.cookiecorner.infoFragments.RecipeInfoFragment"
+        android:label="RECIPES"
+        tools:layout="@layout/fragment_recipe_info" />
+    <fragment
+        android:id="@+id/ratingsInfoFragment"
+        android:name="com.example.cookiecorner.infoFragments.RatingsInfoFragment"
+        android:label="fragment_ratings_info"
+        tools:layout="@layout/fragment_ratings_info" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.cookiecorner.settings.SettingsFragment"
+        android:label="SettingsFragment" />
+    <activity
+        android:id="@+id/activity_settings"
+        android:name="com.example.cookiecorner.settings.SettingsActivity"
+        android:label="SettingsActivity" />
+    <fragment
+        android:id="@+id/nav_customize"
+        android:name="com.example.cookiecorner.fragments.CustomizeFragment"
+        android:label="@string/nav_customize"
+        tools:layout="@layout/fragment_customize" />
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="com.example.cookiecorner.fragments.CreditsFragment"
+        android:label="@string/nav_credits"
+        tools:layout="@layout/fragment_credits" />
 </navigation>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CustomizeFragment">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/bottomPaddingButton"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/descriptionPadding"
+        android:gravity="center"
+        android:text="@string/cust_title"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/titleFont"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:padding="@dimen/logoPadding"
+        android:text="@string/cust_cookie"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="@dimen/accountHeader" />
+
+    <EditText
+        android:id="@+id/cust_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/descriptionPadding"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:padding="@dimen/logoPadding"
+        android:text="@string/cust_flavour"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="@dimen/accountHeader" />
+
+    <EditText
+        android:id="@+id/cust_flavour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/descriptionPadding"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/descriptionPadding"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/small"
+            android:textSize="@dimen/paymentInfoSize" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/med"
+            android:textSize="@dimen/paymentInfoSize" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/large"
+            android:textSize="@dimen/paymentInfoSize" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:padding="@dimen/logoPadding"
+        android:text="@string/quantity"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="@dimen/accountHeader" />
+
+    <EditText
+        android:id="@+id/cust_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/descriptionPadding"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:padding="@dimen/logoPadding"
+        android:text="@string/topping"
+        android:textAlignment="center"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="@dimen/accountHeader" />
+
+    <EditText
+        android:id="@+id/cust_topping"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/descriptionPadding"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="@dimen/custom_order"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/titlePadding"
+        android:text="@string/order"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/paymentInfoSize"
+        android:textStyle="bold" />
+
+</LinearLayout>
+</ScrollView>
