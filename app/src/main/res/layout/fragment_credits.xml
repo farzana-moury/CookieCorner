@@ -1,10 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:padding="@dimen/bottomPaddingButton"
     tools:context=".fragments.CreditsFragment">
 
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/descriptionPadding"
+            android:text="Developed by © 2020 Farzana Moury"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="Images"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="Pixabay"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="https://pixabay.com/"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="Rawpixel"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="https://www.rawpixel.com/"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="Websites"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="Android"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="https://developer.android.com/guide"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="Recipes"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="http://pakirecipe.blogspot.com/2012/08/bakar-khani-by-chef-shireen-anwer.html"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="https://bakingamoment.com/easy-homemade-puff-pastry-recipe/"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+</ScrollView>
