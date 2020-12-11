@@ -15,6 +15,7 @@
     <string name="menu_account">My Account</string>
     <string name="menu_orders">Orders</string>
     <string name="menu_contact">Contact Us</string>
+    <string name="menu_credits">Credits</string>
     <!--  MAIN DRAWER SUBHEADINGS  -->
     <string name="sub_account">Account</string>
     <string name="sub_contact">Need Help?</string>
@@ -29,6 +30,7 @@
     <string name="nav_orders">Orders</string>
     <string name="nav_contact">CONTACT US</string>
     <string name="nav_customize">CUSTOMIZE COOKIE</string>
+    <string name="nav_credits">CREDITS</string>
 
     <!--  GALLERY, RATINGS AND FAQ FRAGMENT STRINGS  -->
     <!--  TOP HEADINGS  -->
@@ -76,9 +78,13 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_settings">Settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
     <!--  WEBSITE SOURCES  -->
     <!--  RECIPE WEBSITES  -->
-<!--    http://pakirecipe.blogspot.com/2012/08/bakar-khani-by-chef-shireen-anwer.html-->
-<!--    https://bakingamoment.com/easy-homemade-puff-pastry-recipe/-->
+
+    <!--    http://pakirecipe.blogspot.com/2012/08/bakar-khani-by-chef-shireen-anwer.html-->
+    <!--    https://bakingamoment.com/easy-homemade-puff-pastry-recipe/-->
 </resources>

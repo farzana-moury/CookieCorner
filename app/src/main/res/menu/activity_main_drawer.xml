@@ -51,6 +51,17 @@
         </menu>
     </item>
 
+    <item android:title="">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_credits"
+                    android:icon="@drawable/ic_baseline_copyright_24"
+                    android:title="@string/menu_credits" />
+            </group>
+        </menu>
+    </item>
+
 <!--   #1 Create Main Menu
   * added the rest of the fragments to mobile_navigation.xml
   * added respective IDs and labels to these fragments

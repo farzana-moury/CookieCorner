@@ -59,7 +59,7 @@ public class HomeFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         fab.hide();
-        fab.setImageResource(R.drawable.ic_baseline_brush_24); // setting the image resource for the fab
+        fab.setImageResource(R.drawable.ic_baseline_color_lens_24); // setting the image resource for the fab
 
         // performing the animations on the elements
         // image will fade in
