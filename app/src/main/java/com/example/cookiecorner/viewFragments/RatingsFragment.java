@@ -1,42 +1,27 @@
 package com.example.cookiecorner.viewFragments;
-
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.infoFragments.RatingsInfoFragment;
-
 import static com.example.cookiecorner.MainActivity.fab;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RatingsFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * @author Farzana Moury
+ * @version 1.0
+ * @since Nov 8th 2020
  */
 public class RatingsFragment extends Fragment {
-
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public RatingsFragment() {
-        // Required empty public constructor
-    }
-
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -45,25 +30,21 @@ public class RatingsFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment RatingsFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static RatingsFragment newInstance(String param1, String param2) {
         RatingsFragment fragment = new RatingsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    /**
+     * This method is used to draw the Fragment UI -- the things to be viewed on screen
+     *
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
+     * @return the view that holds all the viewable objects
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -72,6 +53,7 @@ public class RatingsFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_ratings, container, false);
 
+        // set an adapter to the custom one we made below
         CustomViewPagerAdapter adapter = new CustomViewPagerAdapter(getChildFragmentManager());
         ViewPager viewPager = view.findViewById(R.id.ratingsViewPager);
         viewPager.setAdapter(adapter);
@@ -79,15 +61,33 @@ public class RatingsFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Making a Custom ViewPager Adapter to contain elements of RatingsInfoFragment class
+     *
+     * @author Farzana Moury
+     * @version 1.0
+     * @since Nov 8th 2020
+     */
     public class CustomViewPagerAdapter extends FragmentPagerAdapter {
 
+        /**
+         * constructor.
+         * @param fm Fragment manager
+         */
         public CustomViewPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);
         }
 
+        /**
+         * Retrieves the item's position
+         *
+         * @param position
+         * @return the position of the item that is currently being viewed in the viewPager
+         */
         @NonNull
         @Override
         public Fragment getItem(int position) {
+            // the ratings
             switch (position){
                 case 0: return RatingsInfoFragment.newInstance("Carl Mews", R.drawable.r1,
                         "The bakery is fantastic! Cannot be more proud of their cookies - especially the christmas treats!");
@@ -105,6 +105,10 @@ public class RatingsFragment extends Fragment {
             }
         }
 
+        /**
+         * Gets the size of the viewPager
+         * @return the size of the ViewPager
+         */
         @Override
         public int getCount() {
             return 5;

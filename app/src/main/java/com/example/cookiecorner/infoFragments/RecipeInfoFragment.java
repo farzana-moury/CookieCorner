@@ -49,7 +49,7 @@ public class RecipeInfoFragment extends Fragment {
     /**
      * This method is called when the Fragment is first created. Here we put initialization code.
      *
-     * @param savedInstanceState
+     * @param savedInstanceState the saved Instance state
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -68,9 +68,9 @@ public class RecipeInfoFragment extends Fragment {
     /**
      * This method is used to draw the Fragment UI -- the things to be viewed on screen
      *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
      * @return the view that holds all the viewable objects
      */
     @Override
@@ -81,7 +81,7 @@ public class RecipeInfoFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recipe_info, container, false);
 
-        // displaying each piece of information using the view objects
+        // displaying each piece of information using the UI objects
         TextView recipeTitle = view.findViewById(R.id.recipeTitle);
         recipeTitle.setText(title); // title of the recipe
 

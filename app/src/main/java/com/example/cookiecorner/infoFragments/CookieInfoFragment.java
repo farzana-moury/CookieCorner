@@ -47,7 +47,7 @@ public class CookieInfoFragment extends Fragment {
     /**
      * This method is called when the Fragment is first created. Here we put initialization code.
      *
-     * @param savedInstanceState
+     * @param savedInstanceState the saved Instance state
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -65,9 +65,9 @@ public class CookieInfoFragment extends Fragment {
     /**
      * This method is used to draw the Fragment UI -- the things to be viewed on screen
      *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
      * @return the view that holds all the viewable objects
      */
     @Override
@@ -78,7 +78,7 @@ public class CookieInfoFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_cookie_info, container, false);
 
-        // setting the view elements to the values taken from the bundle
+        // setting the UI elements to the values taken from the bundle
         TextView menuTitle = view.findViewById(R.id.menuTitle);
         menuTitle.setText(title);
 

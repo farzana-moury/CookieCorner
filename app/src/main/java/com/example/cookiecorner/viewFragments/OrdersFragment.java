@@ -1,14 +1,9 @@
 package com.example.cookiecorner.viewFragments;
-
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,39 +11,28 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.example.cookiecorner.MainActivity;
 import com.example.cookiecorner.R;
-import com.example.cookiecorner.SettingsActivity;
 import com.example.cookiecorner.ShoppingCart;
 import com.example.cookiecorner.pojo.CookieMenuItem;
-
 import java.util.ArrayList;
-
 import static com.example.cookiecorner.MainActivity.fab;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link OrdersFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * @author Farzana Moury
+ * @version 1.0
+ * @since Nov 8th 2020
  */
 public class OrdersFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    // properties
     CustomListViewAdapter adapter;
     public ArrayList<CookieMenuItem> orders;
     public ListView listView;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public OrdersFragment() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -58,25 +42,19 @@ public class OrdersFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment OrdersFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static OrdersFragment newInstance(String param1, String param2) {
         OrdersFragment fragment = new OrdersFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    /**
+     * This method is used to draw the Fragment UI -- the things to be viewed on screen
+     *
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
+     * @return the view that holds all the viewable objects
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -84,32 +62,51 @@ public class OrdersFragment extends Fragment {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_orders, container, false);
 
+        // the listView to hold the arrayList
         listView = view.findViewById(R.id.ordersList);
 
         fab.show();
 
+        // accessing the same shopping list that will contain the orders
         orders = ShoppingCart.getInstance().getShoppingList();
 
+        // setting the adapter to the custom listView adapter we made earlier
         adapter = new OrdersFragment.CustomListViewAdapter(getContext(), orders);
 
-        adapter.notifyDataSetChanged(); //letting the adapter know we removed an item (refreshes the view)
-
-        listView.setAdapter(adapter); //setting the adapter to the listview
-
-        for (CookieMenuItem o : orders){
-            System.out.println(o.getName());
-        }
+        // refreshing the orders list
+        adapter.notifyDataSetChanged(); // letting the adapter know we removed an item (refreshes the view)
+        listView.setAdapter(adapter); // setting the adapter to the listview
 
         return view;
     }
 
+    /**
+     * Making a Custom ListView Adapter to contain elements of CookieMenuItem class
+     *
+     * @author Farzana Moury
+     * @version 1.0
+     * @since Nov 30th 2020
+     */
     public class CustomListViewAdapter extends ArrayAdapter<CookieMenuItem> {
 
-        //CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
+        /**
+         * CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
+         *
+         * @param context context
+         * @param items items
+         */
         public CustomListViewAdapter(@NonNull Context context, ArrayList<CookieMenuItem> items) {
             super(context, 0, orders);
         }
 
+        /**
+         * accessing the View object and setting its UI elements to the pieces of information
+         *
+         * @param position the position of the item
+         * @param convertView the View to convert into
+         * @param parent the ViewGroup parent
+         * @return the converted view
+         */
         @NonNull
         @Override
         public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {

@@ -54,7 +54,7 @@ public class RatingsInfoFragment extends Fragment {
     /**
      * This method is called when the Fragment is first created. Here we put initialization code.
      *
-     * @param savedInstanceState
+     * @param savedInstanceState the saved Instance state
      */
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -71,9 +71,9 @@ public class RatingsInfoFragment extends Fragment {
     /**
      * This method is used to draw the Fragment UI -- the things to be viewed on screen
      *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
      * @return the view that holds all the viewable objects
      */
     @Override
@@ -86,7 +86,7 @@ public class RatingsInfoFragment extends Fragment {
 
         // if there is a value within each information holder,
         if(name != null) {
-            TextView customerName = view.findViewById(R.id.customerName); // then populate the view objects with it
+            TextView customerName = view.findViewById(R.id.customerName); // then populate the UI objects with it
             customerName.setText(name); // customer name
         }
         if(image != 0) {

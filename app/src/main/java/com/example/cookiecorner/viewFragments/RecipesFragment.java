@@ -1,13 +1,10 @@
 package com.example.cookiecorner.viewFragments;
-
 import android.content.Context;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,39 +13,28 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.pojo.RecipeItem;
-
 import java.util.ArrayList;
-
 import static com.example.cookiecorner.MainActivity.fab;
 
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link RecipesFragment#newInstance} factory method to
  * create an instance of this fragment.
+ *
+ * @author Farzana Moury
+ * @version 1.0
+ * @since Nov 8th 2020
  */
 public class RecipesFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+    // constants to act as keys with values being pieces of information bundled
     private static final String TITLE = "TITLE";
     private static final String IMAGE = "IMAGE";
     private static final String DURATION = "DURATION";
     private static final String CALORIES = "CALORIES";
     private static final String INSTRUCTIONS = "INSTRUCTIONS";
-
-    public RecipesFragment() {
-        // Required empty public constructor
-    }
 
     /**
      * Use this factory method to create a new instance of
@@ -58,25 +44,19 @@ public class RecipesFragment extends Fragment {
      * @param param2 Parameter 2.
      * @return A new instance of fragment RecipesFragment.
      */
-    // TODO: Rename and change types and number of parameters
     public static RecipesFragment newInstance(String param1, String param2) {
         RecipesFragment fragment = new RecipesFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
         return fragment;
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
-
+    /**
+     * This method is used to draw the Fragment UI -- the things to be viewed on screen
+     *
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
+     * @return the view that holds all the viewable objects
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -85,10 +65,11 @@ public class RecipesFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_recipes, container, false);
 
-        final ListView listView = view.findViewById(R.id.recipeList);
+        final ListView listView = view.findViewById(R.id.recipeList); // listView to hold the content
 
-        final ArrayList<RecipeItem> recipes = new ArrayList<>();
+        final ArrayList<RecipeItem> recipes = new ArrayList<>(); // list of recipes using RecipeItem class
 
+        // adding the recipes to the list
         recipes.add(new RecipeItem("Flaky Puff Pastry", R.drawable.recipe1,
                 "3h 40m", "418 cal",
                 "Ingredients\n\n• Flour\n• Salt\n• Butter \n• Water\n• Sugar" +
@@ -118,11 +99,15 @@ public class RecipesFragment extends Fragment {
 //                "1h 30m", "200 cal", "1. Mix dough\n2. Mix dry ingredients with wet ingredients\n3. Bake 350° for 30 min\n4. Enjoy!"));
 
 
+        // displaying the list in the listView adapter
         listView.setAdapter(new CustomListViewAdapter(getContext(), recipes));
 
+        // making each item on the list take you to their information screen
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                // using bundled data to transfer the current item's information to the Recipe Info Fragment
                 Bundle bundle = new Bundle();
 
                 bundle.putString(TITLE, recipes.get(position).getName());
@@ -131,6 +116,7 @@ public class RecipesFragment extends Fragment {
                 bundle.putString(CALORIES, recipes.get(position).getCalories());
                 bundle.putString(INSTRUCTIONS, recipes.get(position).getInstructions());
 
+                // navigating to the Recipe Info Fragment
                 Navigation.findNavController(view).navigate(R.id.action_nav_recipes_to_recipeInfoFragment, bundle);
             }
         });
@@ -138,20 +124,40 @@ public class RecipesFragment extends Fragment {
         return view;
     }
 
+    /**
+     * Making a Custom ListView Adapter to contain elements of RecipeItem class
+     *
+     * @author Farzana Moury
+     * @version 1.0
+     * @since Nov 27th 2020
+     */
     public class CustomListViewAdapter extends ArrayAdapter<RecipeItem> {
 
-        //CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
+        /**
+         * CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), itemArrayList)
+         *
+         * @param context context
+         * @param items items
+         */
         public CustomListViewAdapter(@NonNull Context context, ArrayList<RecipeItem> items) {
             super(context, 0, items);
         }
 
+        /**
+         * accessing the View object and setting its UI elements to the pieces of information
+         *
+         * @param position the position of the item
+         * @param convertView the View to convert into
+         * @param parent the ViewGroup parent
+         * @return the converted view
+         */
         @NonNull
         @Override
         public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
             if(convertView == null){
                 convertView = LayoutInflater.from(getContext()).inflate(R.layout.recipes_listview, parent, false);
 
-                //populating the textviews with the passed in values from the CookieMenuItem class
+                //populating the textviews with the passed in values from the RecipeItem class
                 TextView name = convertView.findViewById(R.id.recipeName);
                 name.setText(getItem(position).getName());
 

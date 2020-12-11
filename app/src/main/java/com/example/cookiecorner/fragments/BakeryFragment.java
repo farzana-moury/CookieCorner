@@ -23,9 +23,9 @@ public class BakeryFragment extends Fragment {
     /**
      * This method is used to draw the Fragment UI -- the things to be viewed on screen
      *
-     * @param inflater
-     * @param container
-     * @param savedInstanceState
+     * @param inflater a system service that converts xml files into view objects
+     * @param container the invisible container that holds View and ViewGroup
+     * @param savedInstanceState a reference to a bundle object passed into the onCreate method
      * @return the view that holds all the viewable objects
      */
     @Override
