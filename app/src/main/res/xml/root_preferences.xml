@@ -43,50 +43,20 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory app:title="Cookie Flavour">
+    <PreferenceCategory app:title="Customization">
 
         <EditTextPreference
-            app:key="name"
-            app:title="@string/account_name"
+            app:key="flavour"
+            app:title="Cookie Flavour"
             app:useSimpleSummaryProvider="true" />
 
-        <!--        <ListPreference-->
-        <!--            app:defaultValue="reply"-->
-        <!--            app:entries="@array/color_entries"-->
-        <!--            app:entryValues="@array/reply_values"-->
-        <!--            app:key="reply"-->
-        <!--            app:title="@string/color_title"-->
-        <!--            app:useSimpleSummaryProvider="true" />-->
-
-    </PreferenceCategory>
-
-    <PreferenceCategory app:title="Cookie Size">
-
-        <!--        <SwitchPreferenceCompat-->
-        <!--            app:key="sync"-->
-        <!--            app:title="@string/sync_title" />-->
-
-        <!--        <SwitchPreferenceCompat-->
-        <!--            app:dependency="sync"-->
-        <!--            app:key="attachment"-->
-        <!--            app:summaryOff="@string/attachment_summary_off"-->
-        <!--            app:summaryOn="@string/attachment_summary_on"-->
-        <!--            app:title="@string/attachment_title" />-->
-
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="check_box_preference_1"
-            android:title="Check box preference" />
-    </PreferenceCategory>
-
-    <PreferenceCategory android:title="Cookie Toppings">
         <ListPreference
             android:entryValues="@array/toppings_values"
             app:entries="@array/cookie_toppings"
-            app:key="topping"
-            app:title="Select a cookie topping"
+            app:key="toppings"
+            app:title="Cookie Toppings"
             app:useSimpleSummaryProvider="true" />
-
     </PreferenceCategory>
+
 
 </PreferenceScreen>

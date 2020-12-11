@@ -67,6 +67,7 @@ public class CustomizeFragment extends Fragment {
         quantity = view.findViewById(R.id.cust_quantity);
         topping = view.findViewById(R.id.cust_topping);
 
+        // when the submit button is pressed we add to the orders shopping list
         Button submitButton = view.findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,10 +83,7 @@ public class CustomizeFragment extends Fragment {
                                     topping.getText().toString());
 
                     ShoppingCart.getInstance().getShoppingList().add(customCookie);
-
-
                 }
-
 
             }
         });
