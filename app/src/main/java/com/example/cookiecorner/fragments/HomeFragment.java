@@ -6,7 +6,12 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
 import com.example.cookiecorner.R;
 import static com.example.cookiecorner.MainActivity.fab;
 
@@ -20,6 +25,12 @@ import static com.example.cookiecorner.MainActivity.fab;
  * @since Nov 8th 2020
  */
 public class HomeFragment extends Fragment {
+
+    Animation imgAnim, titleAnim ,logoAnim; // animations
+    ImageView image; // elements the animations will perform on
+    LinearLayout title;
+    ImageView logo;
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -50,7 +61,23 @@ public class HomeFragment extends Fragment {
         fab.hide();
         fab.setImageResource(R.drawable.ic_baseline_brush_24); // setting the image resource for the fab
 
-        // when the account button it pressed
+        // performing the animations on the elements
+        // image will fade in
+        image = view.findViewById(R.id.homeImage);
+        imgAnim = AnimationUtils.loadAnimation(getContext(), R.anim.fade_in);
+        image.startAnimation(imgAnim);
+
+        // title and logo will come from the "corner"
+        title = view.findViewById(R.id.logoContainer);
+        titleAnim = AnimationUtils.loadAnimation(getContext(), R.anim.corner_entrance);
+        title.startAnimation(titleAnim);
+
+        logo = view.findViewById(R.id.logo);
+        logoAnim = AnimationUtils.loadAnimation(getContext(), R.anim.corner_entrance);
+        logo.startAnimation(logoAnim);
+
+
+        // when the account button is pressed
         Button accountButton = view.findViewById(R.id.accountButton);
         accountButton.setOnClickListener(new View.OnClickListener() {
             @Override
