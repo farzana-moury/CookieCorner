@@ -94,6 +94,8 @@
     <string name="pixabay_link">https://pixabay.com/</string>
     <string name="rawpixel">Rawpixel</string>
     <string name="rawpixel_link">https://www.rawpixel.com/</string>
+    <string name="canva">Canva</string>
+    <string name="canva_link">https://www.canva.com/</string>
     <string name="websites">Websites</string>
     <string name="android">Android</string>
     <string name="android_link">https://developer.android.com/guide</string>

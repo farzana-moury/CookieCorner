@@ -74,6 +74,26 @@
             android:textSize="@dimen/link_size" />
 
         <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
+            android:text="@string/canva"
+            android:textAlignment="center"
+            android:textSize="@dimen/header_size"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/logoPadding"
+            android:text="@string/canva_link"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="@dimen/link_size" />
+
+        <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
