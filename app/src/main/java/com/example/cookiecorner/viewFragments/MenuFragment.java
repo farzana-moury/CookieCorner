@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.singleton.ShoppingCart;
 import com.example.cookiecorner.pojo.CookieMenuItem;
+
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import static com.example.cookiecorner.MainActivity.fab;
 
@@ -138,7 +140,8 @@ public class MenuFragment extends Fragment {
                 name.setText(getItem(position).getName());
 
                 TextView price = convertView.findViewById(R.id.menuPrice);
-                price.setText("$ " + getItem(position).getPrice());
+                NumberFormat currencyFormat = NumberFormat.getCurrencyInstance();
+                price.setText(currencyFormat.format(getItem(position).getPrice())); //outputting price in currency format
             }
             return convertView;
         }

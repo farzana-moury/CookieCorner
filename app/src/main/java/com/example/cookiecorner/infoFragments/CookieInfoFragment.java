@@ -11,6 +11,9 @@ import android.widget.TextView;
 import com.example.cookiecorner.R;
 import com.example.cookiecorner.singleton.ShoppingCart;
 import com.example.cookiecorner.viewFragments.MenuFragment;
+
+import java.text.NumberFormat;
+
 import static com.example.cookiecorner.MainActivity.fab;
 
 /**
@@ -89,7 +92,8 @@ public class CookieInfoFragment extends Fragment {
         menuDesc.setText(desc);
 
         TextView menuPrice = view.findViewById(R.id.menuCost);
-        menuPrice.setText("$ " + price);
+        NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(); //outputting price in currency format
+        menuPrice.setText(currencyFormat.format(price));
 
         // when you click on the Place Order button
         Button placeOrder = view.findViewById(R.id.placeOrderButton);
