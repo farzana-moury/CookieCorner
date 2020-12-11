@@ -33,15 +33,8 @@
             app:title="@string/account_cvc"
             app:useSimpleSummaryProvider="true" />
 
-        <!--        <ListPreference-->
-        <!--            app:defaultValue="reply"-->
-        <!--            app:entries="@array/color_entries"-->
-        <!--            app:entryValues="@array/reply_values"-->
-        <!--            app:key="reply"-->
-        <!--            app:title="@string/color_title"-->
-        <!--            app:useSimpleSummaryProvider="true" />-->
-
     </PreferenceCategory>
+
 
     <PreferenceCategory app:title="Customization">
 

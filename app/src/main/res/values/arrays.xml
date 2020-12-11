@@ -9,10 +9,10 @@
     </string-array>
 
     <string-array name="toppings_values">
-        <item>sprinkle</item>
-        <item>choc_chip</item>
-        <item>peanut</item>
-        <item>oat</item>
-        <item>raisin</item>
+        <item>Sprinkles</item>
+        <item>Chocolate Chip</item>
+        <item>Peanuts</item>
+        <item>Oats</item>
+        <item>Raisins</item>
     </string-array>
 </resources>

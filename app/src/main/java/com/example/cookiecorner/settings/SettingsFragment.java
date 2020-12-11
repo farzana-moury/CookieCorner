@@ -13,9 +13,6 @@ import com.example.cookiecorner.R;
  * @since Dec 6th 2020
  */
 public class SettingsFragment extends PreferenceFragmentCompat {
-    // property
-    public static EditTextPreference namePreference;
-
     /**
      *
      * @param savedInstanceState savedInstanceState
@@ -24,8 +21,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         setPreferencesFromResource(R.xml.root_preferences, rootKey);
-
-        namePreference = findPreference("name"); //referencing a given preference
 
     }
 }

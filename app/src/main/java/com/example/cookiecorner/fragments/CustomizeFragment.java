@@ -15,6 +15,7 @@ import com.example.cookiecorner.pojo.CookieMenuItem;
 import com.example.cookiecorner.singleton.ShoppingCart;
 
 import static com.example.cookiecorner.MainActivity.fab;
+import static com.example.cookiecorner.MainActivity.preferences;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -83,12 +84,27 @@ public class CustomizeFragment extends Fragment {
                                     topping.getText().toString());
 
                     ShoppingCart.getInstance().getShoppingList().add(customCookie);
-                }
 
+                    System.out.println(customCookie.getDescription());
+                }
             }
         });
 
 
         return view;
+    }
+
+    /**
+     * When an fragment or activity enters back into its view -- it resumes its state
+     */
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // allowing the settings to be able to adjust cookie flavour as well in case user decides to do it that way
+        flavour.setText(preferences.getString("flavour", ""));
+
+        // allowing the settings to be able to adjust cookie topping
+        topping.setText(preferences.getString("toppings", ""));
     }
 }
