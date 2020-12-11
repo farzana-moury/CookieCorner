@@ -7,8 +7,14 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.cookiecorner.R;
+import com.example.cookiecorner.pojo.CookieMenuItem;
+import com.example.cookiecorner.singleton.ShoppingCart;
+
+import static com.example.cookiecorner.MainActivity.fab;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,6 +26,12 @@ import com.example.cookiecorner.R;
  * @since Dec 10th 2020
  */
 public class CustomizeFragment extends Fragment {
+    // properties that will hold the custom cookie info
+    EditText name;
+    EditText flavour;
+    EditText quantity;
+    EditText topping;
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -44,7 +56,41 @@ public class CustomizeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        fab.hide();
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_customize, container, false);
+        View view = inflater.inflate(R.layout.fragment_customize, container, false);
+
+        // set the properties to the editTexts located in the custom cookie fragment
+        name = view.findViewById(R.id.cust_name);
+        flavour = view.findViewById(R.id.cust_flavour);
+        quantity = view.findViewById(R.id.cust_quantity);
+        topping = view.findViewById(R.id.cust_topping);
+
+        Button submitButton = view.findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // for the quantity that the user has entered....
+                for (int i = 0; i <Integer.parseInt(quantity.getText().toString()); i++){
+
+                    // add the user's customized cookie to the shopping list
+                    CookieMenuItem customCookie = new CookieMenuItem(name.getText().toString(),
+                            1 * Integer.parseInt(quantity.getText().toString()), R.drawable.logo,
+                            "" + flavour.getText().toString() + " flavoured cookie topped with " +
+                                    topping.getText().toString());
+
+                    ShoppingCart.getInstance().getShoppingList().add(customCookie);
+
+
+                }
+
+
+            }
+        });
+
+
+        return view;
     }
 }

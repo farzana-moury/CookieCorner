@@ -35,7 +35,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/cust_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/descriptionPadding"
@@ -55,7 +55,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/cust_flavour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/descriptionPadding"
@@ -106,7 +106,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editTextNumberSigned"
+        android:id="@+id/cust_quantity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/descriptionPadding"
@@ -125,7 +125,7 @@
         android:textSize="24sp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/cust_topping"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/descriptionPadding"
@@ -134,12 +134,12 @@
         android:textAlignment="center" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/submitButton"
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/titlePadding"
-        android:text="SUBMIT!"
+        android:text="ORDER"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="18sp"
         android:textStyle="bold" />
