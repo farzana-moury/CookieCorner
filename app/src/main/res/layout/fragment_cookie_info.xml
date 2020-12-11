@@ -11,52 +11,52 @@
     <TextView
         android:id="@+id/menuTitle"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="@dimen/title_height"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimary"
-        android:textSize="30sp"
+        android:textSize="@dimen/titleFont"
         android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/menuImage"
         android:layout_width="match_parent"
-        android:layout_height="178dp"
+        android:layout_height="@dimen/imageHeight"
         tools:src="@tools:sample/backgrounds/scenic" />
 
     <TextView
         android:id="@+id/menuDescription"
         android:layout_width="match_parent"
-        android:layout_height="136dp"
+        android:layout_height="@dimen/textHeight"
         android:layout_marginLeft="@dimen/bottomPaddingButton"
         android:layout_marginRight="@dimen/bottomPaddingButton"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:textColor="@color/cardview_dark_background"
-        android:textSize="18sp"
+        android:textSize="@dimen/paymentInfoSize"
         android:textStyle="italic" />
 
     <TextView
         android:id="@+id/menuCost"
         android:layout_width="match_parent"
-        android:layout_height="61dp"
+        android:layout_height="@dimen/desc_height"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
+        android:textSize="@dimen/paymentInfoSize"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/placeOrderButton"
-        android:layout_width="209dp"
-        android:layout_height="57dp"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
         android:layout_gravity="center"
         android:backgroundTint="@color/colorPrimary"
-        android:text="Place Order"
+        android:text="@string/place_order"
         android:textColor="@color/cardview_light_background" />
 </LinearLayout>

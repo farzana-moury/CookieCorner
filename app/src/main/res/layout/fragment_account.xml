@@ -17,18 +17,17 @@
             android:layout_height="wrap_content"
             android:background="@drawable/side_nav_bar"
             android:padding="@dimen/fab_margin"
-            android:text="Name"
+            android:text="@string/account_name"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="24sp"
+            android:textSize="@dimen/accountHeader"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="@dimen/accMargin"
             android:background="@color/colorPrimaryDark"
-            android:ems="10"
             android:inputType="textPersonName"
             android:padding="@dimen/fab_margin"
             android:textColor="@color/cardview_light_background" />
@@ -39,18 +38,17 @@
             android:layout_height="wrap_content"
             android:background="@drawable/side_nav_bar"
             android:padding="@dimen/fab_margin"
-            android:text="Delivery Location"
+            android:text="@string/account_location"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="24sp"
+            android:textSize="@dimen/accountHeader"
             android:textStyle="bold" />
 
         <EditText
             android:id="@+id/addressEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="@dimen/accMargin"
             android:background="@color/colorPrimaryDark"
-            android:ems="10"
             android:inputType="textPostalAddress"
             android:padding="@dimen/fab_margin"
             android:textColor="@color/cardview_light_background" />
@@ -59,12 +57,12 @@
             android:id="@+id/paymentLabel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="@dimen/titlePadding"
             android:background="@drawable/side_nav_bar"
             android:padding="@dimen/fab_margin"
-            android:text="Payment Information"
+            android:text="@string/account_payment"
             android:textColor="@android:color/holo_orange_light"
-            android:textSize="24sp"
+            android:textSize="@dimen/accountHeader"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -79,17 +77,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:padding="@dimen/fab_margin"
-                android:text="Card Number"
+                android:text="@string/account_card"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18sp"
+                android:textSize="@dimen/paymentInfoSize"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/cardEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
+                android:layout_marginBottom="@dimen/descriptionPadding"
                 android:inputType="numberSigned"
                 android:padding="@dimen/fab_margin"
                 android:textColor="@color/cardview_light_background" />
@@ -100,17 +97,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:padding="@dimen/fab_margin"
-                android:text="Account Holder"
+                android:text="@string/account_holder"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18sp"
+                android:textSize="@dimen/paymentInfoSize"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/accNameEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
+                android:layout_marginBottom="@dimen/descriptionPadding"
                 android:inputType="textPersonName"
                 android:padding="@dimen/fab_margin"
                 android:textColor="@color/cardview_light_background" />
@@ -121,17 +117,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:padding="@dimen/fab_margin"
-                android:text="Expiry Date"
+                android:text="@string/account_date"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18sp"
+                android:textSize="@dimen/paymentInfoSize"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/expDateEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
+                android:layout_marginBottom="@dimen/descriptionPadding"
                 android:inputType="date"
                 android:padding="@dimen/fab_margin"
                 android:textColor="@color/cardview_light_background" />
@@ -142,17 +137,16 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:padding="@dimen/fab_margin"
-                android:text="CVC"
+                android:text="@string/account_cvc"
                 android:textColor="@android:color/holo_orange_light"
-                android:textSize="18sp"
+                android:textSize="@dimen/paymentInfoSize"
                 android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/cvcEditText"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:ems="10"
+                android:layout_marginBottom="@dimen/descriptionPadding"
                 android:inputType="numberSigned"
                 android:padding="@dimen/fab_margin"
                 android:textColor="@color/cardview_light_background" />

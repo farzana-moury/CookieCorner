@@ -14,13 +14,13 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="47dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/descriptionPadding"
         android:gravity="center"
-        android:text="Customize Cookie"
+        android:text="@string/cust_title"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp"
+        android:textSize="@dimen/titleFont"
         android:textStyle="bold" />
 
     <TextView
@@ -29,10 +29,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/side_nav_bar"
         android:padding="@dimen/logoPadding"
-        android:text="Your Cookie"
+        android:text="@string/cust_cookie"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="24sp" />
+        android:textSize="@dimen/accountHeader" />
 
     <EditText
         android:id="@+id/cust_name"
@@ -49,10 +49,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/side_nav_bar"
         android:padding="@dimen/logoPadding"
-        android:text="Flavour"
+        android:text="@string/cust_flavour"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="24sp" />
+        android:textSize="@dimen/accountHeader" />
 
     <EditText
         android:id="@+id/cust_flavour"
@@ -74,24 +74,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Small"
-            android:textSize="18sp" />
+            android:text="@string/small"
+            android:textSize="@dimen/paymentInfoSize" />
 
         <CheckBox
             android:id="@+id/checkBox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Medium"
-            android:textSize="18sp" />
+            android:text="@string/med"
+            android:textSize="@dimen/paymentInfoSize" />
 
         <CheckBox
             android:id="@+id/checkBox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Large"
-            android:textSize="18sp" />
+            android:text="@string/large"
+            android:textSize="@dimen/paymentInfoSize" />
     </LinearLayout>
 
     <TextView
@@ -100,10 +100,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/side_nav_bar"
         android:padding="@dimen/logoPadding"
-        android:text="Quantity"
+        android:text="@string/quantity"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="24sp" />
+        android:textSize="@dimen/accountHeader" />
 
     <EditText
         android:id="@+id/cust_quantity"
@@ -119,10 +119,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/side_nav_bar"
         android:padding="@dimen/logoPadding"
-        android:text="Topping"
+        android:text="@string/topping"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="24sp" />
+        android:textSize="@dimen/accountHeader" />
 
     <EditText
         android:id="@+id/cust_topping"
@@ -135,13 +135,13 @@
 
     <Button
         android:id="@+id/submitButton"
-        android:layout_width="160dp"
+        android:layout_width="@dimen/custom_order"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="@dimen/titlePadding"
-        android:text="ORDER"
+        android:text="@string/order"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="18sp"
+        android:textSize="@dimen/paymentInfoSize"
         android:textStyle="bold" />
 
 </LinearLayout>

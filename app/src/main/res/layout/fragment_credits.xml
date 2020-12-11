@@ -18,9 +18,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/descriptionPadding"
-            android:text="Developed by © 2020 Farzana Moury"
+            android:text="@string/developed"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="@dimen/paymentInfoSize"
             android:textStyle="bold" />
 
         <TextView
@@ -28,9 +28,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="Images"
+            android:text="@string/images"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="@dimen/paymentInfoSize"
             android:textStyle="bold" />
 
         <TextView
@@ -38,9 +38,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
-            android:text="Pixabay"
+            android:text="@string/pixabay"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/header_size"
             android:textStyle="italic" />
 
         <TextView
@@ -48,19 +48,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="https://pixabay.com/"
+            android:text="@string/pixabay_link"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="14sp" />
+            android:textSize="@dimen/link_size" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
-            android:text="Rawpixel"
+            android:text="@string/rawpixel"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/header_size"
             android:textStyle="italic" />
 
         <TextView
@@ -68,19 +68,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="https://www.rawpixel.com/"
+            android:text="@string/rawpixel_link"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="14sp" />
+            android:textSize="@dimen/link_size" />
 
         <TextView
             android:id="@+id/textView10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="Websites"
+            android:text="@string/websites"
             android:textAlignment="center"
-            android:textSize="18sp"
+            android:textSize="@dimen/paymentInfoSize"
             android:textStyle="bold" />
 
         <TextView
@@ -88,9 +88,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
-            android:text="Android"
+            android:text="@string/android"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/header_size"
             android:textStyle="italic" />
 
         <TextView
@@ -98,19 +98,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="https://developer.android.com/guide"
+            android:text="@string/android_link"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="14sp" />
+            android:textSize="@dimen/link_size" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/nav_header_vertical_spacing"
-            android:text="Recipes"
+            android:text="@string/menu_recipes"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textSize="@dimen/header_size"
             android:textStyle="italic" />
 
         <TextView
@@ -118,20 +118,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="http://pakirecipe.blogspot.com/2012/08/bakar-khani-by-chef-shireen-anwer.html"
+            android:text="@string/link1"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="14sp" />
+            android:textSize="@dimen/link_size" />
 
         <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/logoPadding"
-            android:text="https://bakingamoment.com/easy-homemade-puff-pastry-recipe/"
+            android:text="@string/link2"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textSize="14sp" />
+            android:textSize="@dimen/link_size" />
 
     </LinearLayout>
 </ScrollView>

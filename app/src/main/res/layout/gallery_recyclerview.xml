@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/galleryImage"
         android:layout_width="match_parent"
-        android:layout_height="191dp"
+        android:layout_height="@dimen/gallery_image"
         android:layout_margin="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/side_nav_bar" />
 </LinearLayout>

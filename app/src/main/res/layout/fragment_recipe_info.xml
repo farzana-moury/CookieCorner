@@ -15,10 +15,10 @@
     <TextView
         android:id="@+id/recipeTitle"
         android:layout_width="match_parent"
-        android:layout_height="118dp"
+        android:layout_height="@dimen/recipe_title"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/titleSize"
@@ -27,7 +27,7 @@
     <ImageView
         android:id="@+id/recipePic"
         android:layout_width="match_parent"
-        android:layout_height="238dp"
+        android:layout_height="@dimen/recipe_image"
         android:layout_marginBottom="@dimen/descriptionPadding"
         android:background="@color/colorPrimaryDark"
         tools:src="@tools:sample/backgrounds/scenic" />
@@ -43,10 +43,10 @@
         android:background="@color/colorPrimary"
         android:fontFamily="sans-serif-medium"
         android:padding="@dimen/nav_header_vertical_spacing"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="20sp" />
+        android:textSize="@dimen/descriptionSize" />
 
     <TextView
         android:id="@+id/recipeCalories"
@@ -58,10 +58,10 @@
         android:background="@color/colorPrimary"
         android:fontFamily="sans-serif-medium"
         android:padding="@dimen/nav_header_vertical_spacing"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="center"
         android:textColor="@color/cardview_light_background"
-        android:textSize="20sp" />
+        android:textSize="@dimen/descriptionSize" />
 
     <TextView
         android:id="@+id/recipeDesc"
@@ -71,10 +71,10 @@
         android:layout_marginRight="@dimen/bottomPaddingButton"
         android:layout_marginBottom="@dimen/titleSize"
         android:fontFamily="@font/abhaya_libre_bold"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textAlignment="textStart"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="24sp"
+        android:textSize="@dimen/accountHeader"
         android:textStyle="bold" />
 
 </LinearLayout>

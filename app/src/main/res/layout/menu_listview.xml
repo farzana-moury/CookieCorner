@@ -9,29 +9,29 @@
     <TextView
         android:id="@+id/menuName"
         android:layout_width="wrap_content"
-        android:layout_height="75dp"
+        android:layout_height="@dimen/menu_height"
         android:layout_weight="1"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        android:text="TextView"
+        android:paddingLeft="@dimen/descriptionPadding"
+        android:text="@string/textview"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@color/colorPrimary"
-        android:textSize="26sp"
+        android:textSize="@dimen/descriptionMenu"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/menuPrice"
         android:layout_width="wrap_content"
-        android:layout_height="75dp"
+        android:layout_height="@dimen/menu_height"
         android:layout_weight="1"
         android:fontFamily="@font/abhaya_libre_bold"
         android:gravity="center_vertical"
-        android:paddingRight="20dp"
-        android:text="TextView"
+        android:paddingRight="@dimen/descriptionPadding"
+        android:text="@string/textview"
         android:textAlignment="textEnd"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/design_default_color_on_secondary"
-        android:textSize="22sp"
+        android:textSize="@dimen/menu_price"
         android:textStyle="bold" />
 </LinearLayout>

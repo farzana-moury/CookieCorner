@@ -7,24 +7,24 @@
 
     <TextView
         android:id="@+id/orderName"
-        android:layout_width="227dp"
+        android:layout_width="@dimen/order_name"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/titlePadding"
         android:layout_weight="1"
         android:fontFamily="@font/abhaya_libre_bold"
-        android:text="TextView"
+        android:text="@string/textview"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="26sp"
+        android:textSize="@dimen/descriptionMenu"
         android:textStyle="bold" />
 
     <Button
         android:id="@+id/removeOrderButton"
-        android:layout_width="122dp"
+        android:layout_width="@dimen/remove_order"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/titlePadding"
         android:layout_weight="1"
         android:backgroundTint="@color/colorPrimary"
         android:text="Remove"
         android:textColor="@color/cardview_light_background"
-        android:textSize="18sp" />
+        android:textSize="@dimen/paymentInfoSize" />
 </LinearLayout>
