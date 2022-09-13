@@ -2,7 +2,7 @@
 
 ## Overview
 Support The Cookie Corner bakery by buying their cookies! This app is an information app that contains custom tools allowing for a customer-friendly experience. 
-It is a simplistic design that demonstrated the process of ordering from an online store.
+It is a simplistic design that demonstrates the process of ordering from an online store.
 
 
 ## Features 
